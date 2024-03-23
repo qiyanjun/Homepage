@@ -1,0 +1,276 @@
+
+body {
+	font-size: 1em;
+	/*background-color: #67b;*/
+	/*font-family: Arial ;	 !important*/
+}
+#container {
+	width: 100%;
+	margin: 0 auto;
+	background-color: #ebeef4;
+}
+#paperTypes { 
+	font-size: 0.8em;
+}
+
+#masthead {
+	text-align: right;
+	width: 100%;
+	overflow: auto;
+	background-color: #F3FAB6;
+}
+#masthead img {
+	float: left;
+}
+#masthead p {
+	text-align: right;
+	margin: 0;
+	/*margin-top: 3px;
+	margin-right: 10px;*/
+	padding: 0;
+}
+
+
+#content {
+	float: right;
+	margin-left:auto;
+	width: 86%;
+	min-height: 688px;
+	padding: 2px;
+	overflow: auto;
+	background-color: #fff;
+	margin: 1px;
+	display: inline;
+}
+#content img {
+	display: block;
+}
+#footer {
+	clear: both;
+	width: 100%;
+	background-color: #FFCF79;
+	padding: 0;
+	overflow: auto;
+	margin-top: 0px;
+}
+
+
+/* -----------  Styles for Navigation */
+#sidebar {
+	float: left;
+	/*margin-left:auto;*/
+    width: 12%;
+	/*background-color: #E5E4D7;*/
+	background-color: #ebeef4;
+	/*position: fixed ;*/
+	display: inline;
+	overflow: clip;
+    /*font-size: 11px; */
+    font-size: 1vw;	    
+ }
+#sidebar ul {
+	list-style-type: none;
+	width: 100%;
+	display: block;
+	margin: 0;
+	padding: 0;
+    font-family: Arial;   
+}
+#sidebar li {
+	display: block;
+	border: 1px solid white;
+    border-right: 1px solid white;	
+    border-bottom: 1px solid white;	
+    border-top: 1px solid white;	
+}
+#sidebar a {
+	text-decoration: none;
+	color: blue;
+	display: block;
+	padding: 6px;
+}
+#sidebar a:hover {
+	font-weight: bold;
+	text-decoration: none;
+	color: blue;
+	background-color: #f9f9f9;
+}
+
+
+
+/* --------  style for top nav */
+.topnav{
+    border:1px solid #ccc;
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;    
+}
+
+.topnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    border: 1px solid #e7e7e7;
+    background-color: #ccc;
+    position: fixed;
+    top: 0;
+    width: 100%;    
+    display:inline; 
+    /*font-size: 12px;*/ 
+    font-size: 1vw;	    
+    text-align:center;
+    font-family: Arial;   
+}
+
+.topnav li {
+    float: left;
+    border-right: 1px solid #bbb;
+    display:inline;
+}
+
+.topnav a{
+    display:inline-block;
+}
+
+.topnav  li a {
+    display: block;
+    color: blue;    
+    text-align: center;
+    padding: 8px 10px;
+    text-decoration: none;
+}
+
+.topnav li:last-child {
+    border-right: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.topnav  li a:hover {
+    background-color: white;
+}
+
+.topnav .active {
+    background-color: #4CAF50;
+}
+
+
+
+/* ---------Styles for Footer */
+#footer p {
+	font-size: 1em;
+	text-align: center;
+	margin: 0px;
+	padding: 2px;
+}
+#footer a {
+	color: #333;
+	text-decoration: underline;
+}
+#footer a:hover {
+	color: #333;
+	text-decoration: none;
+}
+a {
+	color: #04b;
+	text-decoration: underline;
+}
+a:hover {
+	color: #333;
+	text-decoration: underline;
+}
+.style_bold {
+	font-weight: bold;
+}
+.style_italic {
+	font-style: italic;
+}
+.style7 {
+	color: #800000;
+	margin-right: 0px;
+}
+.style2 {
+	overflow: auto;
+	display: inline;
+}
+.style5 {
+	overflow: auto;
+	display: inline;
+	font-family: Georgia, Times, "Times New Roman", serif;; 
+}
+.style8 {
+    width: 90px; 
+    height: 110px; 
+    float: left;		 
+    margin-bottom: 2px; 
+    margin-right: 3px;
+}
+
+/* ===== style for paper table ===== */
+table.pp {
+    overflow: hidden;
+	width: 100%; 
+	border-collapse: collapse;
+	   padding:0; margin:0;
+}
+
+td.p1 { 
+    overflow: hidden;
+	width: 82%; 
+	text-align: left;
+	border-collapse: collapse;
+}
+
+td.p2 { 
+    overflow: hidden;
+	width: 11%; 
+	text-align: left;
+	vertical-align: middle;
+	border-collapse: collapse;
+}
+
+td.p3 { 
+    overflow: hidden;
+	width: 8%; 
+	text-align: right;
+	vertical-align: middle;
+	border-collapse: collapse;
+}
+
+
+
+
+/* ===== style for Datasets table ===== */
+#datatab2
+{
+background: white;
+margin: 10px;
+border-collapse: collapse;
+text-align: left;
+width: 90%;
+}
+#datatab2 th
+{
+font-size: 14px;
+font-weight: normal;
+color: white;
+background: #74a743;
+padding: 5px 10px;
+text-align: left;
+}
+
+#datatab2 td
+{
+border-bottom: 1px solid #ccc;
+color: black;
+padding: 3px 8px;
+}
+
+#datatab2 tbody tr:hover td {
+color: #000;
+background: #eeeeee;
+}
+
+

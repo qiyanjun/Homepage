@@ -1,0 +1,3684 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Dr. Yanjun Qi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Yanjun Qi" >
+
+    <link href="style.css" rel="stylesheet" type="text/css"> 
+    <link href="./bootstrap/css/bootstrap.css" rel="stylesheet">
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+ <script language="javascript" type="text/javascript">
+
+ var state = 'none';
+ function showhide(layer_ref) {
+ if (state == 'block') {
+ state = 'none';
+ }
+ else {
+ state = 'block';
+ }
+
+ if (document.all) { //IS IE 4 or 5 (or 6 beta)
+ eval( "document.all." + layer_ref + ".style.display = state");
+ }
+ if (document.layers) { //IS NETSCAPE 4 or below
+ document.layers[layer_ref].display = state;
+ }
+ if (document.getElementById &&!document.all) {
+ hza = document.getElementById(layer_ref);
+ hza.style.display = state;
+ }
+ }
+
+ function show(layer_ref) {
+ state = 'block';
+
+ if (document.all) { //IS IE 4 or 5 (or 6 beta)
+ eval( "document.all." + layer_ref + ".style.display = state");
+ }
+ if (document.layers) { //IS NETSCAPE 4 or below
+ document.layers[layer_ref].display = state;
+ }
+ if (document.getElementById &&!document.all) {
+ hza = document.getElementById(layer_ref);
+ hza.style.display = state;
+ }
+ }
+
+ function hide(layer_ref) {
+ state = 'none';
+
+ if (document.all) { //IS IE 4 or 5 (or 6 beta)
+ eval( "document.all." + layer_ref + ".style.display = state");
+ }
+ if (document.layers) { //IS NETSCAPE 4 or below
+ document.layers[layer_ref].display = state;
+ }
+ if (document.getElementById &&!document.all) {
+ hza = document.getElementById(layer_ref);
+ hza.style.display = state;
+ }
+ }
+
+
+ function sDiv(pass) {
+ var divs = document.getElementsByTagName('div');
+ for(i=0;i<divs.length;i++)
+ {
+ 	if(divs[i].id.match('tag'))
+ 	{
+
+ 	if(divs[i].id.match(pass))
+ 	{
+ 		show(divs[i].id);
+ 	}
+ 	if(!divs[i].id.match(pass))
+ 	{
+ 		hide(divs[i].id);
+ 	}
+
+
+ 	}
+ }
+
+ }
+
+</script>
+
+</head>
+
+
+<body>
+
+<p><a name="topPage"></a></p>
+
+    <!-- Begin topbar  -->
+
+<div class="container"> 
+
+<nav class="navbar navbar-fixed-top navbar-expand-sm navbar-dark bg-info">
+
+  <a class="navbar-brand" href="index.htm">Dr. Yanjun Qi</a>
+
+ <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> 
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item ">
+        <a class="nav-link" href="papers.htm" >Publications</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="teaching.htm" >Teaching </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="gQdata.htm" >Research </a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="gnews.htm" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Group
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item"  href="https://qdata.github.io/qdata-page/"
+        target="_blank">Group Research Blog</a>
+          <a class="dropdown-item"  href="https://github.com/qdata" target="_blank">Group GitHub</a>
+
+          <a class="dropdown-item"  href="https://github.com/Qdata4Capstone" target="_blank">Group Capstone GitHub</a>
+
+          <a class="dropdown-item"  href="https://www.youtube.com/channel/UCHMYETgeGbNHVHLidZSV8BQ" target="_blank">Group Research Videos</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item"  href="https://qdata.github.io/qdata-page/member-page/" target="_blank">Group Members</a>
+          <a class="dropdown-item"  href="https://qdata.github.io/qdata-page/news/" target="_blank">Group News</a>
+
+
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item"  href="https://qdata.github.io/deep2Read/aReadingsIndexByDate/" target="_blank">Journal Club: Algorithm</a>
+          <a class="dropdown-item"  href="https://qdata.github.io/deep-learning-undergrad-reading-group/" target="_blank">Journal Club: Undergraduate</a>
+
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item"  href="http://qiyanjun.github.io/books2read//tag/" target="_blank">My Notes on Readings</a>
+          <div class="dropdown-divider"></div>
+          <i><b>OLD legacy research sites</b></i>
+          <a class="dropdown-item"  href="http://deeplearning4discrete.net" target="_blank">deeplearning4discrete.net</a>
+          <a class="dropdown-item"  href="http://deeplearning4biomed.org" target="_blank">deeplearning4biomed.org</a>
+          <a class="dropdown-item"  href="http://jointggm.org" target="_blank">jointnets.org</a>
+           <a class="dropdown-item"  href="http://securemachinelearning.org" target="_blank">TrustworthyMachineLearning.org</a>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link"
+        href="http://scholar.google.com/citations?user=eXKdSu0AAAAJ&hl=en"
+        target="_blank" >GoogleScholar</a>
+      </li>
+
+      <li class="nav-item">
+          <a class="nav-link"  href="bio.htm">ShortBio</a>
+      </li>
+
+      <li class="nav-item">
+          <a class="nav-link"  href="contact.htm">Contact</a>
+      </li>
+
+
+            
+    </ul>
+  </div>
+</nav>       
+</div>   
+<!-- End topbar -->
+
+
+
+    <!-- Begin Container -->
+ <div class="container">
+
+		  <span class="style2">
+
+ 
+		<br>	<h2>Selected Peer-Reviewed Publications  <br> </h2>
+
+
+
+ <div class="card-header">
+
++ Year of Publication :
+<div>
+[<a href="#2023">2024</a>]
+[<a href="#2023">2023</a>]
+[<a href="#2022">2022</a>]
+[<a href="#2021">2021</a>]
+[<a href="#2020">2020</a>]
+[<a href="#2019">2019</a>]
+[<a href="#2017">2017</a>]
+[<a href="#2016">2016</a>]
+[<a href="#2015">2015</a>]  [<a href="#2014">2014</a>] [<a href="#2013">2013</a>]
+[<a href="#2012">2012</a>]  [<a href="#2011">2011</a>]  [<a href="#2010">2010</a>]
+[<a href="#2009">2009</a>]  [<a href="#2008">2008</a>]  [<a href="#2007">2007</a>]  [<a href="#2006">2006</a>]  [<a href="#2005">2005</a>]  [<a href="#2004">2004</a>]  [<a href="#2003">2003</a>]    [<a href="#pre2003">Pre-2003</a>]
+
+</div>
+</div>
+
+
+<!--
+ + Type of Publication :
+<div> [<a
+  href="javascript:sDiv('tagthesis');">Theses</a>]   [<a
+  href="javascript:sDiv('tagbook');">Book &amp; book chapters</a>]
+  [<a href="javascript:sDiv('tagjournal');">Journal</a>]   [<a
+  href="javascript:sDiv('tagconf');">Conference</a>]  [<a
+  href="javascript:sDiv('tagworkshop');">Workshop</a>]
+  [<a href="javascript:sDiv('tagpatent');">Patent</a>]
+  [<a href="javascript:sDiv('tagbestp');">BestPaper</a>]
+  [<a href="javascript:sDiv('tagposter');">Poster</a>]
+</div>
+
++ Categorization wrt Application/Data Types:
+<div>
+ [<a href="javascript:sDiv('tagTex');">Text Mining, IR, NLP</a>]
+  [<a href="javascript:sDiv('tagCB');">Biomedical Data Mining</a>]
+ [<a href="javascript:sDiv('tagVM');">Video/Image/Sensing Data Mining</a>]
+ [<a href="javascript:sDiv('tagSY');">System Data Mining</a>]
+</div> 
+<div class="card-header">
++ Categorization wrt Code/Data Sharing:
+<div id="ShareTypes">
+[<a  href="javascript:sDiv('tagshCode');">CodeShared</a>]
+  [<a href="javascript:sDiv('tagshData');">DataShared</a>] 
+</div>
+</div>
+<br>
+
+  [<a href="javascript:sDiv('tagFusion');">Information Fusion</a>]
+-->
+
+<!---tagFea  tagGM tagSemi tagFusion tagStruct  tagSecu-->
+
+<!---
+<div class="card-header">
++ Categorization wrt Methods: 
+[<a href="javascript:sDiv('tag');" class="btn btn-danger btn-sm">Show all</a>] 
+  [<a href="javascript:sDiv('tagDeep');" class="btn btn-info btn-sm">Deep Learning</a>]
+  [<a href="javascript:sDiv('tagFea');" class="btn btn-info btn-sm">Representation (embed/sparse/factor/.)</a>]
+  [<a href="javascript:sDiv('tagGM');" class="btn btn-info btn-sm">Graphical/Relational Modeling</a>]
+  [<a href="javascript:sDiv('tagSemi');" class="btn btn-info btn-sm">Semi-supervised/Supervised/Multitask</a>]
+  [<a href="javascript:sDiv('tagStruct');" class="btn btn-info btn-sm">Structured Input/Output</a>]
+  [<a href="javascript:sDiv('tagSecu');" class="btn btn-info btn-sm">Robust MachineLearning</a>]
+</div>
+
+<div class="card-header">
++ Summary Sites: [   <a
+        href="http://scholar.google.com/citations?user=eXKdSu0AAAAJ&hl=en"
+        target="_blank" class="btn btn-success btn-sm">GoogleScholar</a>] | [
+        <a href="https://github.com/qdata" target="_blank" class="btn btn-success btn-sm">Our GitHub</a>]| <BR>
+      [ <a href="http://deeplearning4biomed.org" target="_blank" class="btn btn-success btn-sm">deepBiomed</a>]| [<a href="http://securemachinelearning.org" target="_blank" class="btn btn-success btn-sm">trustworthyLearning</a>]| [ <a href="http://www.deeplearning4discrete.net" target="_blank" class="btn btn-success btn-sm">deepDiscrete</a>] | [ <a href="http://jointggm.org" target="_blank" class="btn btn-success btn-sm">jointnets.org</a>]
+</div>
+-->
+
+
+<a name="2024"></a>
+
+<p style="margin: 0in 0in 0pt; font-size: 12pt;">&nbsp;</p>
+<p style="margin: 0in 0in 0pt; font-size: 13pt;"><b><font color="#000000">2024 + PrePrints</font></b></p>
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Xi Fang, Weijie Xu, Fiona Anting Tan, Jiani Zhang, Ziqing Hu, <b>Yanjun Qi</b>, Scott Nickleach, Diego Socolinsky, Srinivasan Sengamedu, Christos Faloutsos, (2023)
+  <br>"Large Language Models(LLMs) on Tabular Data: Prediction, Generation, and Understanding -- A Survey" <i></i>
+  <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+       LLMs, Tabular, GenAI
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://arxiv.org/abs/2402.17944">Arxiv</a>) 
+</td>
+</table>
+</div>
+
+
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Vanamala Venkataswamy, Jake Grigsby, Andrew Grimshaw and <b>Yanjun Qi</b>, 
+  <br>"Launchpad: Learning to Schedule Using Offline and Online RL Methods" <i> at JSSPP-2024 workshop </i>
+  <font color="#38761d"></font>
+  <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+       Cloud computing + Reinforcement Learning
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://arxiv.org/abs/2212.00639">Arxiv</a>) 
+(<a href="https://github.com/QData/super_sac/tree/main">Code</a>)
+</td>
+</table>
+</div>
+
+
+<a name="2023"></a>
+
+<p style="margin: 0in 0in 0pt; font-size: 12pt;">&nbsp;</p>
+<p style="margin: 0in 0in 0pt; font-size: 13pt;"><b><font color="#000000">2023 </font></b></p>
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Zhe Wang, Haozhu Wang,  <b>Yanjun Qi</b>, (2023)
+  <br>"T3GDT: Three-Tier Tokens to Guide Decision Transformer for Offline Meta Reinforcement Learning" <i>at RobotLearning NeurIPS 2023(NeurIPS-23)</i>
+  <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+       Deep Reinforcement Learning, Few shot meta learning
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://openreview.net/forum?id=a8FjMcFdAl">OpenReview</a>) 
+</td>
+</table>
+</div>
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Zifan Xu, Haozhu Wang, Dmitriy Bespalov, Peter Stone,  <b>Yanjun Qi</b>, (2023)
+  <br>"Latent Skill Discovery for Chain-of-Thought Reasoning" <i>at R0-FoMo: Robustness of Few-shot and Zero-shot Learning in Large Foundation Models (R0-FoMo NeurIPS-23)</i>
+  <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+       GenAI, Large Language Model, Few shot Chain of Thoughts Reasoning
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://arxiv.org/abs/2312.04684">Arxiv</a>) 
+</td>
+</table>
+</div>
+
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Zhe Wang, Jake Grigsby,  <b>Yanjun Qi</b>, (2023)
+  <br>"PGrad: Learning Principal Gradients For Domain Generalization " <i>at The Eleventh International Conference on Learning Representations (ICLR-23)</i>
+  <font color="#38761d">(paper acceptance rate: 31.6%)</font>
+
+  <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+       Deep Learning, Domain Generalization
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://openreview.net/forum?id=CgCmwcfgEdH">OpenReview</a>) 
+(<a href="https://github.com/qdata/">Code</a>)
+</td>
+</table>
+</div>
+
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Arshdeep Sekhon, Hanjie Chen, Zhe Wang, Yangfeng Ji, <b>Yanjun Qi</b>, (2023)
+  <br>"Improving Interpretability via Explicit Word Interaction Graph Layer" <i>at Thirty-Seventh AAAI Conference on Artificial Intelligence (AAAI-23)</i>
+  <font color="#38761d">(paper acceptance rate: 19.6%)</font>
+  <font color="#38761d">(oral presentation (Feb 10, 3.45 pm))</font>
+
+  <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+       Deep Learning Interpretability, Relational Learning
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://arxiv.org/abs/2302.02016">Arxiv</a>) 
+(<a href="https://github.com/qdata/wigraph">Code</a>)
+(<a href="https://github.com/QData/WIGRAPH/blob/main/aaai2023talk-v5.pdf">Talk</a>)
+</td>
+</table>
+</div>
+
+
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Dmitriy Bespalov, Sourav Bhabesh, Yi Xiang, Liutong Zhou, <b>Yanjun Qi</b> (2023)
+  <br>"Towards Building a Robust Toxicity Predictor" <i>at The 61st Annual Meeting of the Association for Computational Linguistics (ACL-23)</i>
+  <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+       Adversarial Attack  +  Toxicity Content Moderation + NLP
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="">URL</a>) 
+</td>
+</table>
+</div>
+
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>
+Zichen Wang*, Ryan Brand, Jared Adolf-Bryfogle, Jasleen Grewal, <b>Yanjun Qi</b>, Steven A. Combs, Nataliya Golovach, Rebecca Alford, Huzefa Rangwala*, and Peter M. Clark, (2023)
+  <br>"EGGNet, a Generalizable Geometric Deep Learning Framework for Protein Complex Pose Scoring" <i>at ACS Omega 2024, 9, 7, 7471–7479</i>
+  <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+       Geometric Deep Learning, molecule–protein interactions
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">
+  (<a href="https://pubs.acs.org/doi/full/10.1021/acsomega.3c04889">ACS URL</a>) 
+</td>
+</table>
+</div>
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Aman Shrivastava,  <b>Yanjun Qi</b>, Vicente Ordonez (2023)
+  <br>"Estimating and Maximizing Mutual Information for Knowledge Distillation" 
+  <i>In Proceeding of 2023 IEEE CVPR Workshop on 
+FAIR, DATA EFFICIENT AND TRUSTED COMPUTER VISION</i> (@<a href="https://fadetrcv.github.io/2023/">URL</a>)
+  <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+       Represention learning  +  Knowledge Distillation
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://arxiv.org/abs/2110.15946">Arxiv</a>) 
+(<a href="https://fadetrcv.github.io/2023/">Code</a>)
+</td>
+</table>
+</div>
+
+
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Jake Grigsby,  Zhe Wang, <b>Yanjun Qi</b>, (2022)
+  <br>"Long-Range Transformers for Dynamic Spatiotemporal Forecasting" <i>The 9th SIGKDD International Workshop on Mining and Learning from Time Series (MILETS23) located with the 29th SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD) </i>
+  <font color="#38761d"></font>
+  <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+       Temporal Structured Input/output + Deep Learning
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://arxiv.org/abs/2109.12218">Arxiv</a>) 
+(<a href="https://github.com/qdata/spacetimeformer">Code</a>)
+</td>
+</table>
+</div>
+
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Hanyu Liu, Chengyuan Cai,  <b>Yanjun Qi</b> (2023)
+  <br>"Expanding Scope: Adapting English Adversarial Attacks to Chinese" 
+  <i>TrustNLP: Third Workshop on Trustworthy Natural Language Processing
+Colocated with the Annual Conference of the Association for Computational Linguistics (ACL 2023)</i> (@<a href="https://trustnlpworkshop.github.io">URL</a>)
+  <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+       Adversarial Attack  +  NLP
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://arxiv.org/abs/2110.15946">Arxiv</a>) 
+(<a href="https://github.com/QData/TextAttack">Code</a>)
+</td>
+</table>
+</div>
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Paola Cascante-Bonilla, Leonid Karlinsky, James Seale ,<b>Yanjun Qi</b>, Vicente Ordonez, (2023)
+  <br>"On the Transferability of Visual Features in Generalized Zero-Shot Learning" <i></i>
+  <font color="#38761d"></font>  
+  <font color="#38761d"></font><br>
+  <font face="Arial,Helvetica", color="#990000", size=-1>
+    generalized zero-shot + representation learning 
+  </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://doi.org/10.48550/arXiv.2211.12494">Arxiv</a>) 
+(<a href="https://github.com/uvavision/Curriculum-Labeling">Code</a>)
+</td>
+</table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<a name="2022"></a>
+
+<p style="margin: 0in 0in 0pt; font-size: 12pt;">&nbsp;</p>
+<p style="margin: 0in 0in 0pt; font-size: 13pt;"><b><font color="#000000">2022</font></b></p>
+
+
+
+
+
+
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Zhe Wang, Jake Grigsby, <b>Yanjun Qi</b>, (2022)
+  <br>"ST-MAML: A Stochastic-Task based Method for Task-Heterogeneous Meta-Learning" <i>at the 38th Conference on Uncertainty in Artificial Intelligence (UAI 2022)</i>
+  <font color="#38761d">(acceptance rate: 32% = 194 out of 712 )</font>
+  <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+       Meta Learning
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://arxiv.org/abs/2109.13305">Arxiv</a>) 
+(<a href="https://github.com/QData/ST-MAML">Code</a>)
+</td>
+</table>
+</div>
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li> Arshdeep Sekhon,  Matthew Dwyer, Yangfeng Ji and <b>Yanjun Qi</b>, (2022)
+  <br>"White-box Testing of NLP models with Mask Neuron Coverage" <i> at 2022 Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL 22)</i>
+  <font color="#38761d"></font>
+  <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+       Software testing  +  Machine learning monitoring 
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://arxiv.org/abs/2205.05050">Arxiv</a>) 
+(<a href="https://github.com/QData/MNCOVER">Code</a>)
+</td>
+</table>
+</div>
+
+
+
+
+
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Arshdeep Sekhon,  Zhe Wang, Beilun Wang, <b>Yanjun Qi</b>, (2022)
+  <br>"Beyond Data Samples: Aligning Differential Networks Estimation with Scientific Knowledge" 
+  <i>  Proceedings of  the 2022 International Conference on
+Artificial Intelligence and Statistics (AISTATS) </i>
+ <font  color="#38761d"> (acceptance rate: 29% = 492 out of 1685 )</font> 
+      <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+        Relation Identification + Extra Knowledge + Graphical Model 
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://arxiv.org/abs/2004.11494">Arxiv</a>) 
+(<a href="https://github.com/QData/KDiffNet">Code</a>)
+</td>
+</table>
+</div>
+
+
+
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Vanamala Venkataswamy, Jake Grigsby, Andrew Grimshaw and <b>Yanjun Qi</b>, (2022)
+  <br>"RARE: Renewable Energy Aware Resource Management in Datacenters" <i>JSSPP22 - Job Scheduling Strategies for Parallel Processing (2022)</i>
+  <font color="#38761d"></font>
+  <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+       Cloud computing + Reinforcement Learning
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://arxiv.org/abs/2211.05346">JSSPP-link</a>) 
+(<a href="https://github.com/QData/super_sac/tree/main">Code</a>)
+</td>
+</table>
+</div>
+
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Jake Grigsby,   <b>Yanjun Qi</b>, (2022)
+  <br>"A Closer Look at Advantage-Filtered Behavioral Cloning in High-Noise Datasets" <i></i>
+  <font color="#38761d"></font>
+  <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+       Offline Deep Reinforcement Learning
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://arxiv.org/abs/2110.04698">Arxiv</a>) 
+(<a href="https://github.com/QData/super_sac/tree/main">Code</a>)
+</td>
+</table>
+</div>
+
+
+<a name="2021"></a>
+
+<p style="margin: 0in 0in 0pt; font-size: 12pt;">&nbsp;</p>
+<p style="margin: 0in 0in 0pt; font-size: 13pt;"><b><font color="#000000">2021</font></b></p>
+
+
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Jack Lanchantin, Tianlu Wang, Vicente Ordonez,, <b>Yanjun Qi</b>, (2021)
+  <br>"General Multi-label Image Classification with Transformers" <i>CVPR-21 </i> <font color="#38761d">(acceptance rate: 23.7%))</font> 
+  <font color="#38761d"></font>
+  <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+       Representing Structured dependency  + Masked Self Training 
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://arxiv.org/abs/2011.14027">Arxiv</a>) 
+(<a href="https://github.com/QData/C-Tran">Code</a>)
+</td>
+</table>
+</div>
+
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Paola Cascante-Bonilla, Fuwen Tan, <b>Yanjun Qi</b>, Vicente Ordonez, (2021)
+  <br>"Curriculum Labeling: Self-paced Pseudo-Labeling for Semi-Supervised Learning" <i>at the Thirty-Fifth AAAI Conference on Artificial Intelligence (AAAI-21)</i>
+  <font color="#38761d">(acceptance rate: 21%))</font>  
+  <font color="#38761d"></font><br>
+  <font face="Arial,Helvetica", color="#990000", size=-1>
+    semi-supervised learning + curriculum learning 
+  </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://arxiv.org/abs/2001.06001">Arxiv</a>) 
+(<a href="https://github.com/uvavision/Curriculum-Labeling">Code</a>)
+</td>
+</table>
+</div>
+
+
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Jin Yong Yoo, <b>Yanjun Qi</b>, (2021)
+  <br>"Towards Improving Adversarial Training of NLP Models"<i>2021 Conference on Empirical Methods in Natural Language Processing (EMNLP) </i>, 
+  <font color="#38761d">(acceptance rate: 34.9%))</font>  
+      <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+    Natural Language Processing +  Adversarial Examples + Adversarial Training  
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="">Arxiv</a>) 
+(<a href="https://github.com/QData/TextAttack">Code</a>)
+</td>
+</table>
+</div>
+
+
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Jack Lanchantin, Arshdeep Sekhon, Clint Miller, <b>Yanjun Qi</b>, (2021)
+  <br>"Transfer Learning for Predicting Virus-Host Protein Interactions for Novel Virus Sequences" <i>at 2021 ACM Conference on Bioinformatics, Computational Biology, and Health Informatics (ACM BCB) </li> <font color="#38761d">(acceptance rate: 29%))</font>  
+ <font face="Arial,Helvetica", color="#990000", size=-1>
+       Link Prediction  + Masked Self Training + Sequence Representation Learning  
+        </font>
+        <font size=-1>
+   Also presented at NeurIPS Covid-19 Symposium 2020 (Spotlight), Learning Meaningful Representations of Life NeurIPS Workshop (LMRL) 2020, Machine Learning in Computational Biology (MLCB) 2020 (Spotlight) </font>
+</ul>
+</td>
+<td class="p3">(<a href="https://www.biorxiv.org/content/10.1101/2020.12.14.422772v2">BioArxiv</a>) 
+(<a href="https://github.com/QData/DeepVHPPI">Code</a>)
+</td>
+</table>
+</div>
+
+
+
+
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Paola Cascante-Bonilla, Arshdeep Sekhon, <b>Yanjun Qi</b>, Vicente Ordonez, (2021)
+  <br>"Evolving Image Compositions for Feature Representation Learning" <i>at the The 32nd British Machine Vision Conference (BMVC-21)</i>
+  <font color="#38761d">(acceptance rate: 36%= 437/1206))</font>  
+  <font color="#38761d"></font><br>
+  <font face="Arial,Helvetica", color="#990000", size=-1>
+    data augmentation + representation learning 
+  </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://arxiv.org/abs/2106.09011">Arxiv</a>) 
+(<a href="https://github.com/uvavision/Curriculum-Labeling">Code</a>)
+</td>
+</table>
+</div>
+
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Jake Grigsby,  Jin Yong Yoo, <b>Yanjun Qi</b>, (2021)
+  <br>"Towards Automatic Actor-Critic Solutions to Continuous Control" <i>Deep Reinforcement Learning Workshop at NeurIPS 2021</i>
+  <font color="#38761d"></font>
+  <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+       AutoML  + Deep Reinforcement Learning
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://arxiv.org/abs/2106.08918">Arxiv</a>) 
+(<a href="https://github.com/QData/deep_control">Code</a>)
+</td>
+</table>
+</div>
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li> Sanchit Sinha, Hanjie Chen, Arshdeep Sekhon, Yangfeng Ji, <b>Yanjun Qi</b>, (2021)
+  <br>"Perturbing Inputs for Fragile Interpretations in Deep Natural Language Processing" <i> EMNLP BlackNLP  Proceeding Track</i>  <br><font color="#38761d"></font>
+     <font face="Arial,Helvetica", color="#990000", size=-1>
+     Natural Language Processing +  Interpretibility + Adversarial Examples 
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://arxiv.org/abs/2108.04990?context=cs">Arxiv</a>) 
+(<a href="https://github.com/QData/TextAttack-Fragile-Interpretations"> Code</a>)
+</td>
+</table>
+</div>
+
+
+
+
+
+<a name="2020"></a>
+
+<p style="margin: 0in 0in 0pt; font-size: 12pt;">&nbsp;</p>
+<p style="margin: 0in 0in 0pt; font-size: 13pt;"><b><font color="#000000">2020</font></b></p>
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>John X. Morris, Eli Lifland, Jin Yong Yoo, <b>Yanjun Qi</b>, (2020)
+  <br>"TextAttack: A Framework for Adversarial Attacks in Natural Language Processing"<i>2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)</i>, <font color="#38761d"></font>
+      <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+    Natural Language Processing +  Opensource pytorch library + Adversarial Examples 
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://arxiv.org/abs/2005.05909">Arxiv</a>) 
+(<a href="https://github.com/QData/TextAttack">Code</a>)
+</td>
+</table>
+</div>
+ 
+
+
+<div id="tagFea_tagGM"> 
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>John Morris, Eli Lifland, Jack Lanchantin, Yangfeng Ji, <b>Yanjun Qi</b>, (2020)
+  <br>"Reevaluating Adversarial Examples in Natural Language",  <i>2020 Conference on Empirical Methods in Natural Language Processing (EMNLP )</i>
+<font  color="#38761d"> </font> <br>
+  <font face="Arial,Helvetica", color="#990000", size=-1>
+    Natural Language Processing +  Trustworthy Evaluation + Adversarial Examples 
+ </font>
+</li>
+</ul>
+</td>
+<td class="p3">(<a href="http://arxiv.org/abs/2004.14174">Arxiv</a>) 
+(<a href="https://github.com/QData/Reevaluating-NLP-Adversarial-Examples">Code</a>) <br>
+(<a href="https://openreview.net/forum?id=BkxmKgHtwH">Old Version</a>) 
+</td>
+
+</table>
+</div>
+
+
+
+
+<div id="tagFea_tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Jack Lanchantin,  <b>Yanjun Qi</b>,  (2020)
+  <br>"Graph Convolutional Networks for Epigenetic State Prediction Using Both Sequence and 3D Genome Data", <i>Bioinformatics V36, S2, Pages i659–i667,  </i><font color="#38761d">  (featured ECCB track (20.19%))</font>
+  <br><font face="Arial,Helvetica", color="#990000", size=-1>
+    Deep Graph Neural Networks + Epigenetic data analysis 
+     </font>
+  </li>
+</ul>
+</td>
+<td class="p3">
+(<a href="https://doi.org/10.1093/bioinformatics/btaa793">Bioinformatics</a>) 
+(<a href="https://github.com/QData/ChromeGCN">ChromeGCN Code</a>)
+</td>
+</table>
+</div>
+
+
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Derrick Blakely, Eamon Collins, Ritambhara Singh,  <b>Yanjun Qi</b>,  (2020)
+  <br>"FastSK: Fast Sequence Analysis with Gapped String Kernels”  <i>Bioinformatics V36, S2,  Pages i857–i865 </i><font color="#38761d">  (featured ECCB  talk track (20.19%))</font>
+      <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+        Scalable and fast string kernel for string input based classification and regression , like TFBS; 
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">
+(<a href="https://doi.org/10.1093/bioinformatics/btaa817">Bioinformatics</a>) 
+(<a href="https://github.com/QData/FastSK">Code</a>)
+(<a href="https://www.youtube.com/watch?v=RABVXMP6lcY">Talk Slide</a>)
+</td>
+</table>
+</div>
+
+
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Jake Grigsby, <b>Yanjun Qi</b>, (2020)
+  <br>"Measuring Visual Generalization in Continuous Control from Pixels" <i>Deep Reinforcement Learning Workshop at NeurIPS 2020</i>
+  <font color="#38761d"></font>
+  <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+       Visual Generalization + Deep Reinforcement Learning
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://arxiv.org/abs/2010.06740">Arxiv</a>) 
+(<a href="https://github.com/QData/deep_control">Code</a>)
+</td>
+</table>
+</div>
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Arshdeep Sekhon, Zhe Wang, <b>Yanjun Qi</b>, (2020)
+  <br>"Relate and Predict: Structure-Aware Prediction with Jointly Optimized Neural Dependency Graph." <i>ICML Graph Relational Learning Workshop </i>
+  <font color="#38761d"></font>
+  <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+        Neural Graphical Model  + Joint Optimization
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://arxiv.org/abs/2004.11494">Arxiv</a>) 
+(<a href="https://qdata.github.io/jointggm-web//">Code</a>)
+</td>
+</table>
+</div>
+
+
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Jin Yong Yoo, John X. Morris, Eli Lifland,  <b>Yanjun Qi</b>, (2020)
+  <br>"Searching for a Search Method: Benchmarking Search Algorithms for Generating NLP Adversarial Examples" <i> EMNLP BlackNLP  Proceeding Track</i>  <br><font color="#38761d"></font>
+     <font face="Arial,Helvetica", color="#990000", size=-1>
+     Natural Language Processing +  Combinatorial Search + Adversarial Examples 
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="http://arxiv.org/abs/2009.06368">Arxiv</a>) 
+(<a href="https://github.com/QData/TextAttack-Search-Benchmark">Benchmark Code</a>)
+</td>
+</table>
+</div>
+
+
+
+
+<div id="tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>John X. Morris,  Jin Yong Yoo,   <b>Yanjun Qi</b>, (2020)
+  <br>"TextAttack: Lessons learned in designing Python frameworks for NLP" <i> EMNLP  Workshop for Natural Language Processing Open Source Software (NLP-OSS) Proceeding Track</i>  <br><font color="#38761d"></font>
+     <font face="Arial,Helvetica", color="#990000", size=-1>
+     Natural Language Processing +  Combinatorial Search + Adversarial Examples 
+        </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="http://arxiv.org/abs/2009.06368">Arxiv</a>) 
+(<a href="https://github.com/QData/TextAttack">Code</a>)
+</td>
+</table>
+</div>
+
+
+
+
+
+
+<a name="2019"></a>
+
+<p style="margin: 0in 0in 0pt; font-size: 12pt;">&nbsp;</p>
+<p style="margin: 0in 0in 0pt; font-size: 13pt;"><b><font color="#000000">2019</font></b></p>
+
+
+
+
+
+<div id="tagFea_tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Jack Lanchantin, Arshdeep Sekhon,  <b>Yanjun Qi</b>, (2019)
+  <br>"Neural Message Passing for Multi-Label Classification", The European Conference on Machine Learning (ECML 2019)  </i>  <br><font color="#38761d">(acceptance rate: 18%,  130 out of 734 submissions)</font>
+      <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+    Deep Graph Neural Networks+ Multi-label Classification 
+     </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://arxiv.org/abs/1904.08049">Arxiv</a>) 
+(<a href="https://github.com/QData/LaMP">LAMP Code</a>)
+</td>
+</table>
+</div>
+
+
+
+<div id="tagFea_tagGM"> 
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Arshdeep Sekhon, Beilun Wang, <b>Yanjun Qi</b>, (2019)
+  <br>"Adding Extra Knowledge in Scalable Learning of Sparse Differential Gaussian Graphical Models",  
+  <i> Arxiv Preprint </i> 
+<font  color="#38761d"> </font> <br>
+  <font face="Arial,Helvetica", color="#990000", size=-1>
+    Gaussian Graphical Model +  Structural Change + Scalable sGGM + Extra Knowledge
+ </font>
+</li>
+</ul>
+</td>
+<td class="p3">(<a href="http://biorxiv.org/cgi/content/short/716852v1">BioArxiv</a>) (<a href="./paperA14/2019-kDiffNet.pdf">PDF</a>) 
+(<a href="https://github.com/QData/JointNets">JointNets Code</a>)
+</td>
+
+</table>
+</div>
+
+
+
+
+
+
+<div id="tagFea_tagconf_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Jack Lanchantin, Arshdeep Sekhon, Ritambhara Singh,  <b>Yanjun Qi</b>, (2019)
+  <br>"Prototype Matching Networks for Large-Scale Multi-label Genomic Sequence Classification", <i>NeurIPS Learning Meaningful Representations of Life Workshop (LMRL)</i>  
+      <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+    Deep Learning + Prototype + Matching Networks + Multi-label Classification + Genomic Sequence
+     </font>
+  </li>
+</ul>
+</td>
+<td class="p3">
+(<a href="https://arxiv.org/abs/1710.11238">Arxiv</a>) 
+</td>
+</table>
+</div>
+
+
+<!---
+<div id="tagshCode_tagconf_tagSecu_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Ji Gao, Jack Lanchantin,  <b>Yanjun Qi</b>, (2018)
+  <br>"MCTSBug: Generating Adversarial Text Sequences via Monte Carlo Tree Search and Homoglyph Attack", <i> Open Review Preprint</i>
+  <br> <font face="Arial,Helvetica", color="#990000", size=-1>
+    adversarial examples + MCTS + deep learning + text data
+ </font>
+  </li>
+</ul>
+</td>
+<td class="p3">  
+(<a href="https://openreview.net/forum?id=SJxiHnCqKQ"> URL </a>)
+</td>
+</table>
+</div>
+--->
+
+
+
+
+
+
+
+<a name="2018"></a>
+
+<p style="margin: 0in 0in 0pt; font-size: 12pt;">&nbsp;</p>
+<p style="margin: 0in 0in 0pt; font-size: 13pt;"><b><font color="#000000">2018</font></b></p>
+
+
+
+<div id="tagGM">
+<table class="pp">
+ <tr><td class="p1" >
+  <ul>
+  <li>Beilun Wang, Arshdeep Sekhon,  <b>Yanjun Qi</b>, (2018)
+  <br>"A fast and scalable joint estimator for integrating additional knowledge in learning multiple related sparse gaussian graphical models.",  
+  <i>  Proceedings of  The 35th International Conference on Machine Learning (ICML) </i><br> 
+  <font color="#38761d"> (acceptance rate: 24.9% )</font>  
+      <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+    Gaussian Graphical Model +  Multitask Structural Learning + Scalable sGGM + Extra Knowledge
+ </font>
+  </li>
+</ul>
+</td>
+<td class="p3">
+(<a href="http://proceedings.mlr.press/v80/wang18f.html"  >Link</a>) <br>
+     (<a href="https://github.com/QData/JEEK/blob/master/JEEK-ICML18talk.pdf" >Talk</a>)     
+ 
+(<a href="https://github.com/QData/JEEK" >GitHub</a>) <br>
+(<a href="https://cran.r-project.org/web/packages/jeek/index.html" >Rtool</a>) 
+</td></tr>
+</table>
+</div>
+
+
+
+
+
+
+
+
+<div id="tagshCode_tagconf_tagSecu_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Weilin Xu, David Evans, <b>Yanjun Qi</b>, (2018)
+  <br>"Feature Squeezing: Detecting Adversarial Examples in Deep Neural Networks", 
+  <i>@ proceeding of the Network and Distributed System Security Symposium (NDSS) </i>
+   <i> 
+    <br>  <font  color="#38761d"> (acceptance rate: 15%)</font> 
+    <br>
+    <font face="Arial,Helvetica", color="#990000", size=-1>
+    adversarial machine learning + deep learning
+ </font> </i>
+  </li>
+</ul>
+</td>
+<td class="p3">
+(<a href="https://arxiv.org/abs/1704.01155">Arxiv</a>)
+(<a href="paperA14/2017MLSEC17-poster-FeatureSqueezing.pdf">Poster</a>)
+(<a href="paperA14/2018_ndss_feature_squeezing.pptx">TalkSlide</a>) 
+(<a href="https://qdata.github.io/secureml-web//2017/12/12/Zoo/">AboutTool</a>)
+<!--(<a href="https://github.com/QData/FeatureSqueezing">Code (only Squeezing)</a>)-->
+(<a href="https://github.com/mzweilin/EvadeML-Zoo">Tool</a>)
+</td>
+</table>
+</div>
+
+
+
+
+
+
+
+
+<div id="tagFea_tagGM"> 
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Beilun Wang, Arshdeep Sekhon,  <b>Yanjun Qi</b>, (2018)
+  <br>"Fast and Scalable Learning of Sparse Changes in High-Dimensional Gaussian Graphical Model Structure",  
+  <i>  Proceedings of  the 21th International Conference on
+Artificial Intelligence and Statistics (AISTATS) </i>
+<br> <font  color="#38761d"> (acceptance rate: 30% out of 645 )</font> 
+<br>
+  <font face="Arial,Helvetica", color="#990000", size=-1>
+    Gaussian Graphical Model +  Structural Change + Scalable sGGM
+ </font>
+</li>
+</ul>
+</td>
+<td class="p3">
+(<a href="https://arxiv.org/abs/1710.11223">Arxiv</a>) 
+     (<a href="paperA14/2017-diffeenips17workshop.pdf">Poster</a>)
+     (<a href="https://github.com/QData/DIFFEE/blob/master/2018-DIFFEE-talk.pdf">Talk</a>)     
+ (<a href="https://github.com/QData/DIFFEE">GitHub</a>) <br>
+(<a href="https://cran.r-project.org/web/packages/diffee/index.html">Rtool</a>) 
+</td>
+
+</table>
+</div>
+
+
+
+<div id="tagFea_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li> Arshdeep Sekhon, Ritambhara Singh,  <b>Yanjun Qi</b>, (2018)
+  <br>"DeepDiff: Deep-learning for predicting Differential gene expression from histone modifications", </i> Bioinformatics, Volume 34, Issue 17, 1 September 2018, Pages i891–i900; 
+      <br><font
+  color="#38761d"> (impact factor: 5.481 )</font> 
+   <font face="Arial,Helvetica", color="#990000", size=-1>
+    Deep Learning + Multitasking + EpiGenomic 
+     </font>
+  </li>
+</ul>
+</td>
+<td class="p3">
+(<a href="https://academic.oup.com/bioinformatics/article/34/17/i891/5093224">Bioinformatics</a>) 
+     (<a href="https://github.com/QData/DeepDiffChrome/blob/master/ArshDeepDiffTalk.pdf">Talk</a>)<br>
+      (<a href="https://github.com/QData/DeepDiffChrome">DeepDiff Code</a>)
+</td>
+</table>
+</div>
+
+
+<div id="tagbio_tagJou_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>
+Travers Ching, Daniel S Himmelstein, Brett K Beaulieu-Jones, Alexandr A Kalinin, Brian T Do, Gregory P Way, Enrico Ferrero, Paul-Michael Agapow, Wei Xie, Gail L Rosen, Benjamin J Lengerich, Johnny Israeli, Jack Lanchantin, Stephen Woloszynek, Anne E Carpenter, Avanti Shrikumar, Jinbo Xu, Evan M Cofer, David J Harris, Dave DeCaprio, <b>Yanjun Qi</b>, Anshul Kundaje, Yifan Peng, Laura K Wiley, Marwin HS Segler, Anthony Gitter, Casey S Greene, (2018)
+  <br>"Opportunities And Obstacles For Deep Learning In Biology And Medicine", <i>In Journal of the Royal Society Interface.</i>
+   <i>
+      <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+    deep learning + biomedicine
+ </font> <br><font
+  color="#38761d"> (impact factor: 3.91 )</font> 
+  </li>
+</ul>
+</td>
+<td class="p3">
+(<a href="http://biorxiv.org/content/early/2017/05/28/142760">bioArxiv</a>)
+(<a href="https://www.ncbi.nlm.nih.gov/pubmed/29618526">Pubmed</a>)
+
+  (<a href="https://github.com/greenelab/deep-review">GitHub</a>)
+</td>
+</table>
+</div>
+
+
+
+<div id="tagshCode_tagconf_tagSecu_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Ji Gao, Jack Lanchantin, Mary Lou Soffa, <b>Yanjun Qi</b>, (2018)
+  <br>"Black-box Generation of Adversarial Text Sequences to Evade Deep Learning Classifiers", <i>published in 2018 IEEE Security and Privacy Workshops (SPW)</i> <br><font
+  color="#38761d"> (acceptance rate: 28.8% =21 out of 73 )</font>
+   <i>
+      <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+    adversarial machine learning + deep learning + text data
+ </font>
+  </li>
+</ul>
+</td>
+<td class="p3">  
+(<a href="https://github.com/QData/deepWordBug/blob/master/about/Ji2017_EvadeNLP-extended.pdf">Extend ArxivV</a>) 
+(<a href="https://ieeexplore.ieee.org/document/8424632/">IEEE Version</a>)
+
+(<a href="https://github.com/QData/deepWordBug">DeepWordBug Code</a>)
+</td>
+</table>
+</div>
+
+
+
+<div id="tagSemi_tagshCode_tagconf_tagStruct">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>In Kee Kim, <b>Yanjun Qi</b>,  Marty Humphrey (2018)
+  <br>"CloudInsight: Utilizing a Council of Experts to Predict Future Cloud Application Workloads", <i>@ proceeding of IEEE CLOUD  </i><br>
+   <font
+  color="#38761d"> (acceptance rate: 15% )(@the best student paper session)</font>
+      <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+     machine learning application in cloud computing 
+ </font>  
+  </li>
+</ul>
+</td>
+<td class="p3">
+(<a href="http://martyhumphrey.info/pdf/CloudInsight_Cloud2018.pdf">PDF</a>)
+
+</td>
+</table>
+</div>
+
+
+
+
+     <a name="2017"></a>
+
+<p style="margin: 0in 0in 0pt; font-size: 12pt;">&nbsp;</p>
+<p style="margin: 0in 0in 0pt; font-size: 13pt;"><b><font color="#000000">2017</font></b></p>
+
+<div id="tagFea_tagconf_tagCB_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1">
+  <ul>
+<li> Ritambhara Singh, Jack Lanchantin, Arshdeep Sekhon, <b>Yanjun Qi</b>,
+  (2017)
+  <br>"Attend and Predict: Understanding Gene Regulation by Selective Attention on Chromatin",
+   <i> at the Thirty-first Annual Conference on Neural Information Processing Systems  </i>,
+   (<a href="https://nips.cc/Conferences/2017/Dates"> (NIPS 2017) </a>)
+    <br>  <font face="Arial,Helvetica"><font color="#990000">
+    <font size=-1>
+    deep learning + epigenomics + interpretable model + biomedical application
+  </font></font></font>
+</li></ul>
+</td>
+<td class="p3">
+     (<a href="https://arxiv.org/abs/1708.00339">Arxiv</a>)
+     (<a href="https://github.com/QData/AttentiveChrome/blob/master/20171126-PNNL-AttentiveChrome.pdf">Talk</a>)
+     (<a href="https://papers.nips.cc/paper/7255-attend-and-predict-understanding-gene-regulation-by-selective-attention-on-chromatin.pdf">Online</a>)
+(<a href="https://github.com/QData/AttentiveChrome">AttentiveChrome Code</a>)<br>
+(<a href="https://qdata.github.io/deep4biomed-web//EpiGenome-AttentiveChrome/">Web</a>)
+
+</td>
+</table>
+  </div>
+
+<br>
+
+<div id="tagGM_tagFea_tagconf_tagCB_tagshCode_tagshData">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Beilun Wang, Ji Gao,  <b>Yanjun Qi</b>, (2017)
+  <br>"A Fast and Scalable Joint Estimator for Learning Multiple Related Sparse Gaussian Graphical Models",
+    <i>  Proceedings of </i> The 20th International Conference on
+Artificial Intelligence and Statistics (AISTATS) <font
+  color="#38761d"> (acceptance rate: 30% out of 530 )</font> 
+  <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+    information fusion + Gaussian graphical model + large-scale learning
+ </font>
+  </li>
+</ul>
+</td>
+<td class="p3">
+(<a href="http://arxiv.org/abs/1702.02715">Arxiv</a>)
+(<a href="paperA14/2017_JEM_combined.pdf">PDF</a>)
+(<a href="paperA14/2017-aistat-poster-simule.pdf">Poster</a>)
+(<a href="http://proceedings.mlr.press/v54/wang17e.html">Online</a>)
+(<a href="https://github.com/QData/FASJEM">Code</a>)
+(<a href="https://cran.r-project.org/web/packages/fasjem/index.html">Rtool</a>)
+</td>
+</table>
+</div>
+
+
+<div id="tagGM_tagconf_tagCB_tagshCode_tagshData">
+<table class="pp">
+ <td class="p1">
+  <ul>
+<li>Beilun Wang, Ritambhara Singh, <b>Yanjun Qi</b>,
+  (2017)
+  <br>"A constrained L1 minimization approach for estimating multiple Sparse Gaussian or Nonparanormal Graphical Models",
+   (<a href="http://www.springer.com/computer/ai/journal/10994">Machine Learning</a>) Journal (2017). doi:10.1007/s10994-017-5635-7
+    <br>  <font face="Arial,Helvetica"><font color="#990000">
+    <font size=-1>
+    graphical model + interpretable model + biomedical application
+  </font></font></font>
+</li>  </ul>
+</td>
+<td class="p3">
+(<a href="https://arxiv.org/abs/1605.03468">Arxiv</a>)
+(<a href="paperA14/2017_SIMULE.pdf">PDF</a>)
+(<a href="paperA14/2016-SIMULE_poster_icml16.pdf">Talk</a>)
+(<a href="http://www.springer.com/-/3/AVzXDgW32Z5C3c778l6Q">Online</a>)
+ 
+(<a href="https://github.com/QData/SIMULE">Code</a>)
+(<a href="https://cran.r-project.org/web/packages/simule/index.html">Rtool</a>)
+  </td>
+</table>
+</div>
+
+
+
+<div id="tagconf_tagStruct_tagCB_tagshCode_tagFea">
+<table class="pp">
+ <td class="p1">
+  <ul>
+<li>Ritambhara Singh, Arshdeep Sekhon, Kamran Kowsari, Jack Lanchantin,
+  Beilun Wang, <b>Yanjun Qi</b> (2017)
+  <br>"GaKCo: a Fast GApped k-mer string Kernel using COunting", <i>The European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD) </i>(<a
+  href="http://ecmlpkdd2017.ijs.si/program.html">ECML-PKDD 2017</a>)
+<font color="#38761d">(acceptance rate: 27% (total 104 out of 384 submissions) )</font>
+    <br>  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+    string kernel + fast/scalable/parallel machine learning +  biomedical application
+  </font></font></font>
+</li> </ul>
+</td>
+<td class="p3">
+(<a href="http://arxiv.org/abs/1704.07468">Arxiv</a>)
+(<a href="paperA14/2017-GaKCo-ECML17.pdf">PDF</a>)
+(<a href="paperA14/2017-GaKCo-ECML17.pptx">Talk</a>)
+(<a href="https://github.com/QData/GaKCo-SVM/blob/master/GaKCo-ECML17-Slides.pdf">TalkPDF</a>)
+ 
+(<a href="https://github.com/QData/GaKCo-SVM">GaKCo Code</a>)
+</td>
+</table>
+ </div>
+
+
+
+<div id="tagFea_tagconf_tagCB_tagshCode_tagshData_tagbestp_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Jack Lanchantin, Ritambhara Singh, Beilun Wang,   <b>Yanjun Qi</b>, (2017)
+  <br>"Deep Motif Dashboard: Visualizing and Understanding Genomic Sequences Using Deep Neural Networks",
+   <i> the Proceedings of </i> Pacific Symposium on Biocomputing
+    (<a    href="http://psb.stanford.edu/keydates/">PSB-17 </a> (Talk/Proceeding))
+   <br>  
+ <font face="Arial,Helvetica"> <font color="blue">
+  <b>(Best Paper Award !)</b> at NIPS17 workshop for Transparent and interpretable Machine Learning in Safety Critical Environments.
+  </font></font><br> 
+   <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+    deep learning + structured prediction + interpretable model + biomedical application
+     </font></font></font>
+  </li>
+</ul>
+</td>
+<td class="p3">
+(<a href="paperA14/2017_demo.pdf">PDF</a>)
+(<a href="paperA14/2017_demo_slides.pdf">Talk</a>)
+(<a href="http://arxiv.org/abs/1608.03644">Arxiv</a>)
+(<a href="https://psb.stanford.edu/psb-online/proceedings/psb17/lanchantin.pdf">Online</a>)
+  (<a href="https://github.com/QData/DeepMotif">DeepMotif Code</a>)
+  (<a href="https://github.com/QData/DeepMotif">Data</a>)
+</td>
+</table>
+</div>
+
+
+
+
+
+<div id="tagFea_tagconf_tagSecu_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Beilun Wang, Ji Gao,  <b>Yanjun Qi</b>, (2017)
+  <br>"A Theoretical Framework for Robustness of (Deep) Classifiers Against Adversarial Examples",
+   <i> the International Conference on Learning Representations </i>,  (<a
+    href="http://www.iclr.cc/doku.php?id=start">ICLR- 2017 </a>) 
+      <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+    representation learning + adversarial machine learning
+ </font>
+  </li>
+</ul>
+</td>
+<td class="p3">
+(<a href="https://arxiv.org/abs/1612.00334">Arxiv</a>)
+(<a href="paperA14/2017-ICLR-poster-unified.pdf">Poster</a>)
+(<a href="paperA14/2016iclr_UF-AML-arxiv.pdf">PDF</a>)
+  </td>
+</table>
+</div>
+
+
+
+
+<div id="tagFea_tagconf_tagSecu_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Andrew Norton,  <b>Yanjun Qi</b>, (2017)
+  <br>"Adversarial-Playground: A Visualization Suite Showing How Adversarial Examples Fool Deep Learning",
+  <i> The IEEE Symposium on Visualization for Cyber Security </i> <a href="http://vizsec.org/">(VizSec)</a>,
+      <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+    adversarial examples + visualization
+ </font>
+  </li>
+</ul>
+</td>
+<td class="p3">(<a href="https://arxiv.org/abs/1708.00807">Arxiv</a>)
+(<a href="http://arxiv.org/abs/1706.01763">ArxivV0</a>)<br>(<a href="https://github.com/QData/AdversarialDNN-Playground/blob/master/presentation.pdf">Slide</a>)
+    (<a href="https://github.com/QData/AdversarialDNN-Playground">Code</a>)
+</td>
+</table>
+</div>
+
+
+
+
+<div id="tagconf_tagSecu_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Ji Gao, Beilun Wang, Zeming Lin, Weilin Xu, <b>Yanjun Qi</b>, (2017)
+  <br>"DeepCloak: Masking Deep Neural Network Models for Robustness against Adversarial Samples",
+   <i> the International Conference on Learning Representations </i>,  (<a
+    href="http://www.iclr.cc/doku.php?id=start">ICLR-2017 </a>) 
+      <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+    representation learning + adversarial machine learning
+ </font>
+  </li>
+</ul>
+</td>
+<td class="p3">
+(<a href="https://arxiv.org/abs/1702.06763">Arxiv</a>)
+(<a href="paperA14/2017-ICLRposter_deepCloak.pdf">Poster</a>)
+  (<a href="https://github.com/QData/DeepCloak">Code</a>)
+</td>
+</table>
+</div>
+
+
+
+<div id="tagFea_tagconf_tagCode_tagDeep_tagCB">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Jack Lanchantin, Ritambhara Singh,  <b>Yanjun Qi</b>, (2017)
+  <br>"Memory Matching Networks for Genomic Sequence Classification",
+   <i> the International Conference on Learning Representations </i>,  (<a
+    href="http://www.iclr.cc/doku.php?id=start">ICLR-2017 </a>) 
+      <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+    representation learning + genomic sequence mining
+ </font>
+  </li>
+</ul>
+</td>
+<td class="p3">
+(<a href="https://arxiv.org/abs/1702.06760">Arxiv</a>)
+(<a href="paperA14/2017-ICLR-Poster-MeMo.pdf">Poster</a>)
+</td>
+</table>
+</div>
+
+
+
+
+
+<div id="tagGM_tagCB">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Chandan Singh, Beilun Wang,   <b>Yanjun Qi</b>, (2017)
+  <br>"A Constrained, Weighted-L1 Minimization Approach for Joint Discovery of Heterogeneous Neural Connectivity Graphs", Appeared at 
+  <i>the NIPS 2017 workshop for Advances in Modeling and Learning Interactions from Complex Data. </i>  
+      <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+    sGGM + Neuro-Imaging + Functional Connectivity
+ </font>
+  </li>
+</ul>
+</td>
+<td class="p3">
+(<a href="https://arxiv.org/abs/1709.04090">Arxiv</a>) 
+     (<a href="https://github.com/QData/SIMULE/blob/master/2017_NGP_WSIMULE.pdf">Slide</a>)
+     (<a href="https://github.com/QData/SIMULE/blob/master/2017poster_wsimule_nov23.pdf">Poster</a>)
+(<a href="https://github.com/QData/SIMULE">Code</a>)
+(<a href="https://cran.r-project.org/web/packages/simule/index.html">Rtool</a>)
+</td>
+</table>
+</div>
+
+
+<div id="tagFea_tagDeep">
+<table class="pp">
+ <td class="p1" >
+  <ul>
+  <li>Muthuraman Chidambaram,  <b>Yanjun Qi</b>,
+    <br>"Style Transfer Generative Adversarial Networks: Learning to Play Chess Differently",
+   <i>
+      <br>  <font face="Arial,Helvetica", color="#990000", size=-1>
+    adversarial learning + style transfer
+ </font>
+  </li>
+</ul>
+</td>
+<td class="p3">
+(<a href="https://arxiv.org/abs/1702.06762">Arxiv</a>)
+      (<a href="https://github.com/QMLB-GPapersCapstoneRepos/AdversarialChess">Code</a>)
+</td>
+</table>
+</div>
+
+
+
+<a name="2016"></a>
+
+<p style="margin: 0in 0in 0pt; font-size: 12pt;">&nbsp;</p>
+<p style="margin: 0in 0in 0pt; font-size: 13pt;"><b><font color="#000000">2016</font></b></p>
+
+
+<div id="tagFea_tagconf_tagjournal_tagCB_tagshCode_tagDeep">
+<table class="pp">
+ <td class="p1">
+  <ul>
+<li> Ritambhara Singh, Jack Lanchantin, <b>Yanjun Qi</b>,
+  (2016)
+  <br>"DeepChrome: Deep-learning for predicting gene expression from histone modifications",
+   <i> 15th European Conference on Computational Biology </i>,
+   (<a href="http://bioinformatics.oxfordjournals.org/content/32/17/i639.short">Bioinformatics</a> (2016) 32 (17): i639-i648.)
+    <br><font
+  color="#38761d"> (impact factor: 5.481 )</font>  <font face="Arial,Helvetica"><font color="#990000">
+    <font size=-1>
+    deep learning + epigenomics + interpretable model + biomedical application
+  </font></font></font>
+</li></ul>
+</td>
+<td class="p3">
+     (<a href="paperA14/2016-DeepChrome.pdf">PDF</a>)
+     (<a href="paperA14/2016-DeepChrome-talk.pdf">Slide</a>)
+     (<a href="https://arxiv.org/abs/1607.02078">Arxiv</a>)
+(<a href="http://bioinformatics.oxfordjournals.org/content/32/17/i639.short">Online</a>)
+(<a href="https://github.com/QData/DeepChrome">DeepChrome Code</a>)<br>
+(<a href="http://qdataw.cs.virginia.edu/">Web</a>) <br>
+
+</td>
+</table>
+  </div>
+
+<br>
+
+<div id="tagFea_tagconf_tagStruct_tagCB_tagshCode_tagshData_tagDeep">
+<table class="pp">
+ <td class="p1">
+  <ul>
+<li>Zeming Lin, Jack Lanchantin, <b>Yanjun Qi</b>, (2016)
+  <br>"MUST-CNN: A Multilayer Shift-and-Stitch Deep Convolutional Architecture for Sequence-based Protein Structure Prediction",
+   <i> the 30th AAAI Conference on Artificial Intelligence </i>,  (<a
+    href="http://www.aaai.org/Conferences/AAAI/aaai16.php">(AAAI-16)</a>)
+    &nbsp;<font
+  color="#38761d"> (Talk / Paper acceptance rate: 26% )</font>
+    <br>  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+    deep learning + structured prediction +  biomedical application
+  </font></font></font>
+</li> </ul>
+</td>
+<td class="p3">
+   (<a href="paperA14/2016-MustCnn.pdf">PDF</a>)
+   (<a href="paperA14/2016-AAAIt.pdf">Talk</a>)
+   (<a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/view/12440/11559">online</a>)
+   (<a href="http://arxiv.org/abs/1605.03004">Arxiv</a>)
+ 
+(<a href="https://github.com/DeepLearning4BioSeqText/Paper16-AAAI-MUST-CNN">Code</a>)
+<br>(<a href="https://github.com/DeepLearning4BioSeqText/Paper16-AAAI-MUST-CNN/tree/master/data">Data</a>)
+</td>
+</table>
+ </div>
+
+
+<div id="tagjournal_tagStruct_tagCB_tagshCode">
+<table class="pp">
+ <td class="p1">
+  <ul>
+<li>Ritambhara Singh, Jack Lanchantin, Gabriel Robins, <b>Yanjun Qi</b>, (2016)
+  <br>"Transfer String Kernel for Cross-Context DNA-Protein Binding Prediction",
+   <i>IEEE/ACM Transactions on Computational Biology and
+  Bioinformatics (Journal)</i>,  (<a
+    href="https://www.computer.org/web/tcbb">TCBB</a>)
+    <br>  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+    string kernel + transfer learning  +  biomedical application
+  </font></font></font>
+</li> </ul>
+</td>
+<td class="p3">
+   (<a href="paperA14/2016-TSK.pdf">PDF</a>)
+   (<a href="paperA14/2016-TSK-talk.pdf">Talk</a>)
+       (<a href="https://www.ncbi.nlm.nih.gov/pubmed/27654939">online</a>)
+(<a href="http://arxiv.org/abs/1609.03490">Arxiv</a>)
+ 
+(<a href="https://github.com/QData/TransferStringKernel">Code</a>)
+</td>
+</table>
+ </div>
+
+
+<div id="tagjournal_tagStruct_tagCB_tagshCode_tagshData">
+<table class="pp">
+ <td class="p1">
+  <ul>
+<li>Feiyu Xiong; Moshe Kam ; Leon Hrebien; Beilun Wang; <b>Yanjun Qi</b>, (2016)
+  <br>"Kernelized Information-Theoretic Metric Learning for Cancer Diagnosis  using
+  High-Dimensional Molecular Profiling Data",
+   <i>ACM Transactions on Knowledge Discovery from Data (Journal)</i>,  (<a
+    href="http://dl.acm.org/citation.cfm?id=2789212">TKDD</a>)
+    <br>  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+    metric learning + Kernel method +  biomedical application
+  </font></font></font>
+</li> </ul>
+</td>
+<td class="p3">
+(<a href="paperA14/2015-TKDD.pdf">PDF</a>)
+(<a href="http://dl.acm.org/citation.cfm?id=2789212">Online</a>)
+ 
+(<a href="https://github.com/DataFusion4NetBio/Paper15-MetricLearn4CancerExpression">Code</a>)<br>
+(<a href="https://github.com/DataFusion4NetBio/Paper15-MetricLearn4CancerExpression/tree/master/KITML_code/data">Data</a>)
+</td>
+</table>
+ </div>
+
+
+<div id="tagFea_tagconf_tagStruct_tagCB_tagshCode">
+<table class="pp">
+ <td class="p1">
+  <ul>  <div id="tagconf_tagCB">
+<li> Ritambhara Singh, <b>Yanjun Qi</b>,
+  (2016)
+  <br>"Character based String Kernels for Bio-Entity Relation Detection",
+   <i> the Proceedings of ACL - 15th Workshop on Biomedical Natural Language Processing </i>,  (BIONLP 2016)
+    <br>  <font face="Arial,Helvetica"><font color="#990000">
+    <font size=-1>
+   character-based representation + string kernel + text classification + biomedical application
+  </font></font></font>
+</li></ul>
+</td>
+<td class="p3">
+	(<a href="paperA14/2016-SK-ACL.pdf">PDF</a>)
+	(<a href="paperA14/2016-SK-ACL-talk.pdf">Talk</a>)
+	(<a href="http://www.aclweb.org/anthology/W/W16/W16-29.pdf#page=78">Online</a>)
+ 
+	(<a href="https://github.com/QData/TransferStringKernel">Code</a>)
+</td>
+</table>
+</div>
+
+
+<div id="tagFea_tagworkshop_tagStruct_tagCB_tagshCode_tagshData_tagDeep">
+<table class="pp">
+ <td class="p1">
+  <ul>
+<li>Jack Lanchantin, Ritambhara Singh, Zeming Lin, <b>Yanjun Qi</b>,
+  (2016)
+  <br>"Deep Motif: Visualizing Genomic Sequence Classifications",
+   <i> the International Conference on Learning Representations </i>,  (<a
+    href="http://www.iclr.cc/doku.php?id=start">ICLR-2016 </a>)
+    <br>  <font face="Arial,Helvetica"><font color="#990000">
+    <font size=-1>
+    deep learning + structured prediction + interpretable model + biomedical application
+  </font></font></font>
+</li></ul>
+</td>
+<td class="p3">
+     (<a href="paperA14/2016-DeMo.pdf">PDF</a>)
+     (<a href="http://arxiv.org/abs/1605.01133">Arxiv</a>)
+(<a href="http://beta.openreview.net/pdf?id=k80kv3zjGtOYKX7ji4V7">Online</a>)
+ 
+(<a href="https://github.com/QData/DeepMotif">Code</a>)
+(<a href="https://github.com/QData/DeepMotif">Data</a>)
+</td>
+</table>
+</div>
+
+
+<div id="tagGM_tagjournal_tagCB_tagshCode_tagshData">
+<table class="pp">
+ <td class="p1">
+  <ul>
+<li>Beilun Wang, Ritambhara Singh, <b>Yanjun Qi</b>,
+  (2016)
+  <br>"A constrained L1 minimization approach for estimating multiple Sparse Gaussian or Nonparanormal Graphical Models",
+   <i> the International Conference on Machine Learning </i>,  (<a
+    href="https://sites.google.com/site/compbioworkshopicml2016/home">Computational Biology Workshop </a>)
+    <br>  <font face="Arial,Helvetica"><font color="#990000">
+    <font size=-1>
+    graphical model + interpretable model + biomedical application
+  </font></font></font>
+</li>  </ul>
+</td>
+<td class="p3">
+(<a href="https://arxiv.org/abs/1605.03468">Arxiv</a>)
+ 
+(<a href="https://github.com/QData/SIMULE">Code</a>)
+(<a href="https://github.com/QData/SIMULE">Data</a>)
+  </td>
+</table>
+</div>
+
+
+
+
+<div id="tagSecu_tagconf_tagshCode">
+<table class="pp">
+ <td class="p1">
+  <ul>
+<li>Weilin Xu, <b>Yanjun Qi</b>, David Evans (2016)
+  <br>"Automatically Evading Classifiers",
+   <i> Proceedings of the Network and Distributed System Security Symposium, </i>,  (<a
+    href="http://www.internetsociety.org/events/ndss-symposium-2016">(NDSS-16)</a>)
+    &nbsp;<font
+  color="#38761d"> (Talk / Paper acceptance rate: 60/389=15%)</font>
+    <br>  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+    machine learning + security
+  </font></font></font>
+</li>  </ul>
+</td>
+<td class="p3">
+   (<a href="paperA14/2016-evade_classifier.pdf">PDF</a>)
+   (<a href="paperA14/2016-evade-ndsst.pdf">Talk</a>)
+(<a href="http://evademl.org/">Code</a>)
+  </td>
+</table>
+</div>
+
+
+
+
+<div id="tagFusion_tagworkshop_tagCB_tagshCode_tagshData">
+<table class="pp">
+ <td class="p1">
+  <ul>
+<li>Sarah Mohamed, Nick Janus,  <b>Yanjun Qi</b>,   (2016)
+  <br>"SCODE: A Cytoscape app for supervised complex detection in protein-protein interaction graphs",  (<a
+    href="http://f1000research.com/articles/5-1699/v1">F1000Research</a>)
+    <br>  <font face="Arial,Helvetica"><font color="#990000">
+    <font size=-1>
+    subgraph search +  biomedical application
+  </font></font></font>
+</li>  </ul>
+</td>
+<td class="p3">
+(<a href="http://f1000research.com/articles/5-1699/v1">Online</a>)
+ 
+ (<a href="https://github.com/DataFusion4NetBio/Paper16-SCODE">Code</a>)
+ (<a href="https://github.com/DataFusion4NetBio/Paper16-SCODE">Data</a>)  </td>
+</table>
+</div>
+
+
+
+<div id="tagFusion_tagjournal_tagVM_tagStruct">
+<table class="pp">
+ <td class="p1">
+  <ul>
+<li>Jiaqi Gong,  <b>Yanjun Qi</b>, Myla Goldman, John Lach (2016)
+  <br>"Causality Analysis of Inertial Body Sensors for Multiple Sclerosis Diagnostic Enhancement",
+   <i> IEEE Journal of Biomedical and Health Informatics , </i>,  (<a
+    href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=7508446">(BHI)</a>)
+    &nbsp;<font
+  color="#38761d"> (Journal Impact Factor 2.093)</font>
+    <br>  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+    time series segmentation / casual analysi + sensor data
+  </font></font></font>
+</li>  </ul>
+</td>
+<td class="p3">
+   (<a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=7508446">Online</a>)
+ 
+ </td>
+</table>
+</div>
+
+
+
+<div id="tagGM_tagjournal_tagVM">
+<table class="pp">
+ <td class="p1">
+  <ul>
+<li>Jiaqi Gong, Philip  Asare, <b>Yanjun Qi</b>, John Lach (2016)
+  <br>"Piecewise Linear Dynamical Model for Action Clustering from Real-World Deployments of Inertial Body Sensors",
+   <i> IEEE Transactions on Affective Computing, </i>,
+   (<a
+    href="http://www.computer.org/web/tac">(TAFFCSI)</a>)
+    &nbsp;<font
+  color="#38761d"> (Journal Impact Factor 2.675)</font>
+    <br>  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+    time series segmentation / clustering + sensor data
+  </font></font></font>
+</li>  </ul>
+</td>
+<td class="p3">
+   (<a href="http://ieeexplore.ieee.org/xpl/abstractAuthors.jsp?reload=true&arnumber=7453143">Online</a>)
+</td>
+</table>
+</div>
+
+
+
+<div id="tagStruct_tagconf_tagSY">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li>InKee Kim, Wei Wang, <b>Yanjun Qi</b> and Marty Humphrey, (2016)
+  <br>"Empirical Evaluation of Workload Forecasting Techniques for Predictive Cloud Resource Scaling",
+    <i>IEEE </i>
+  (<a href="http://www.thecloudcomputing.org/2016/">CLOUD</a>)
+  &nbsp;<font
+  color="#38761d"> (Talk / Paper acceptance rate: 15%)</font>
+  <br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  Supervised Local Learning approach + system-level data about cloud system
+  </font></font></font></li>  </ul>
+</td>
+<td class="p3">
+ (<a href="http://www.cs.virginia.edu/~ik2sb/papers/CLOUD16_PredScale_paper.pdf">PDF</a>)
+ (<a href="http://www.cs.virginia.edu/~ik2sb/slides/CLOUD16_PredScale_ppt.pdf">Talk</a>)
+ </td>
+</table>
+</div>
+
+
+
+<div id="tagFusion_tagjournal_tagCB">
+<table class="pp">
+ <td class="p1">
+  <ul>
+<li>Babiceanu, Mihaela; Qin, Fujun; Xie, Zhongqiu; Jia, Yuemeng; Lopez, Kevin; Janus, Nick; Facemire, Loryn; Kumar, Shailesh; Pang, Yuwei; <b>Qi, Yanjun</b>; Lazar, Luliana; Li, Hui, (2015)
+  <br>"Recurrent Chimeric Fusion RNAs in Non-Cancer Tissues and Cells",
+   <i>Nucleic Acid Research (Journal)</i>,  (<a
+    href="http://nar.oxfordjournals.org">NAR</a>)
+    <font  color="#38761d">(Impact Factor 8.808)</font>
+    <br>  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+    graph mining + novel biomedical application
+  </font></font></font>
+</li>  </ul>
+</td>
+<td class="p3">
+   (<a href="http://nar.oxfordjournals.org/content/early/2016/02/01/nar.gkw032.full">Online</a>)
+</td>
+
+</table>
+</div>
+
+
+     <a name="2015"></a>
+
+<p style="margin: 0in 0in 0pt; font-size: 12pt;">&nbsp;</p>
+<p style="margin: 0in 0in 0pt; font-size: 13pt;"><b><font color="#000000">2015</font></b></p>
+
+<div id="tagVM_tagconf_tagStruct_tagshData">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li>Sarah Masud Preum, John Stankovic, <b>Yanjun Qi</b> (2015)<br>
+"MAPer: A Multi-scale Adaptive Personalized Model for Temporal Human Behavior Prediction ",
+The 24th ACM International Conference on Information and Knowledge Management <a
+  href="http://www.cikm-2015.org/"  rel="nofollow"><font color="#0000ff">(CIKM 2015)</font></a>&nbsp;<font
+  color="#38761d"> (long paper acceptance rate: 18% = 87/484)</font> <br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  Feature learning + Time series prediction
+  </font></font></font>
+</li>
+</ul>
+</td>
+<td class="p3">
+(<a
+  href="paperA14/2015-maper.pdf"
+  rel="nofollow"><font color="#0000ff">PDF</font></a>)
+     (<a href="paperA14/2015-MAPerCIKM.pdf">Talk</a>)
+  
+  (<a href="https://github.com/QMLB-GPapersCapstoneRepos/Paper15-MAPer4TimeSeriesData">Data</a>)
+ </td>
+</table>
+ </div>
+
+
+
+<div id="tagworkshop_tagStruct_tagCB_tagshCode_tagSemi">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li>Ritambhara Singh; Gabriel Robins; <b>Yanjun Qi</b>; (2015)<br>
+"Transfer String Kernel for Cross-Context Transcription Factor Binding Prediction",
+the 14th International Workshop on Data Mining in Bioinformatics  <a
+  href="http://home.biokdd.org/biokdd15/"  rel="nofollow"><font color="#0000ff">(BioKDD'15)</font></a>
+ <br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  Sequence Labeling + Kernel + Transfer Learning
+  </font></font></font>
+</li>
+</ul>
+</td>
+<td class="p3">
+   (<a href="paperA14/2016-TSK.pdf">PDF</a>)
+   (<a href="paperA14/2016-TSK-talk.pdf">Talk</a>)
+       (<a href="https://www.computer.org/csdl/trans/tb/preprint/07569028.pdf">online</a>)
+(<a href="http://arxiv.org/abs/1609.03490">Arxiv</a>)
+
+(<a href="https://github.com/QData/TransferStringKernel">Code</a>)
+</td>
+</table>
+</div>
+
+<div id="tagFea_tagconf_tagSY">
+<table class="pp">
+ <td class="p1">
+  <ul>	<li>Ke Wang, <b>Yanjun Qi</b>, Jeffrey J. Fox, Mircea R. Stan, Kevin Skadron, (2015)
+  <br>"Association Rule Mining with the Micron Automata Processor",
+   <i>29th IEEE International Parallel & Distributed Processing Symposium </i>(<a
+    href="http://www.ipdps.org">IPDPS15</a>)
+    <br>  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+    Data mining  + Hardware acceleration
+  </font></font></font>
+</li>
+</ul>
+  </td>
+<td class="p3">
+   (<a href="paperA14/2015-IPDPSap.pdf">PDF</a>)
+   (<a href="paperA14/2015-IPDPSapt.pdf">Talk</a>)
+  </td>
+</table>
+ </div>
+
+
+<div id="tagCB_tagStruct_tagconf_tagIF_tagshData">
+<table class="pp">
+ <td class="p1">
+  <ul>
+<li>Oznur Tastan, <b>Yanjun Qi</b>, J.G. Carbonell, Judith Klein-Seetharaman, (2015)
+  <br>"Refining Literature Curated Protein Interactions Using Expert Opinions",
+   <i>The 20th Pacific Symposium on
+  Biocomputing (PSB) </i>,  (<a
+    href="http://psb.stanford.edu">PSB15</a>)
+    <br>  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+    Crowd sourcing + Network Biology
+  </font></font></font>
+</li> </ul>
+</td>
+<td class="p3">
+(<a href="paperA14/2015-PSB-final.pdf">PDF</a>)
+(<a href="paperA14/2015-PSBt.pdf">Talk</a>)
+(<a href="https://github.com/DataFusion4NetBio/Papers-HIV1toHuman-PPISupervised">Data</a>)
+  </td>
+</table>
+ </div>
+
+
+
+<div id="tagCB_tagjournal_tagIF_tagStruct">
+<table class="pp">
+ <td class="p1">
+  <ul>
+<li>Ritambhara Singh; Cem Kuscu;  Aaron Quinlan; <b>Yanjun Qi</b>;  Mazhar Adli, (2015)
+  <br>"Cas9-Chromatin binding information enables more accurate CRISPR Off-target Prediction",
+   <i>Nucleic Acid Research (Journal)</i>,  (<a
+    href="http://nar.oxfordjournals.org">NAR</a>)
+    <font  color="#38761d">(Impact Factor 8.808)</font>
+    <br>  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+    sequence labeling + novel biomedical application
+  </font></font></font>
+</li>  </ul>
+</td>
+<td class="p3">
+   (<a href="http://nar.oxfordjournals.org/content/early/2015/06/01/nar.gkv575.full?sid=5b14210b-6360-4b4b-97b5-e1f14aed48ff">Online</a>)
+   (<a href="http://nar.oxfordjournals.org/content/early/2015/06/01/nar.gkv575.full.pdf+html">PDF</a>)
+  </td>
+</table>
+</div>
+
+<div id="tagVM_tagconf_tagGM">
+<table class="pp">
+ <td class="p1">
+  <ul>
+<li>Jiaqi Gong, John Lach, <b>Yanjun Qi</b>, MD. Goldman, (2015)
+  <br>"Causal Analysis of Inertial Body Sensors for Enhancing Gait Assessment Separability towards Multiple Sclerosis Diagnosis",
+   <i>IEEE Body Sensor Network (BSN) 2015 </i>,
+    <br>  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+    Casual analysis + Temporal data
+  </font></font></font>
+</li>  </ul>
+</td>
+<td class="p3">
+(<a href="paperA14/2015-casualSensor.pdf">PDF</a>)
+(<a href="paperA14/2015-casualT.pdf">Talk</a>)
+
+  </td>
+</table>
+</div>
+
+
+<div id="tagSecu_tagposter_tagSY">
+<table class="pp">
+ <td class="p1">
+  <ul>  <li>Weilin Xu, <b>Yanjun Qi</b>, David Evans, (2015)
+  <br>Poster: "Automatically Evading Classifiers",
+   <i>36th IEEE Symposium on Security and Privacy </i>(<a
+    href="http://www.ieee-security.org/TC/SP2015/">SP2015</a>)
+    <br>  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+    Secure machine learning
+  </font></font></font>
+</li>
+</ul>
+  </td>
+<td class="p3">
+   (<a href="paperA14/2015_aec_poster.pdf">PDF</a>)
+  
+  </td>
+</table>
+</div>
+
+
+<div id="tagStruct_tagposter">
+<table class="pp">
+ <td class="p1">
+  <ul>  <li>
+Chunkun Bo, Ke Wang, <b>Yanjun Qi</b>, Kevin Skadron (2015)
+  <br>Poster: "String kernel testing acceleration using the Micron Automata Processor",
+   <i>Workshop on Computer Architecture for Machine Learning</i>
+    <br>  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+    Scaling up machine learning with hardware
+  </font></font></font>
+</li>
+</ul>
+  </td>
+<td class="p3">
+   (<a href="paperA14/2015-skap.pdf">PDF</a>) <br>
+   (<a
+    href="http://icri-ci.technion.ac.il/files/2015/07/D2-CAMel-2015-Bo.pdf">url</a>)
+  
+  </td>
+</table>
+</div>
+
+
+
+
+     <a name="2014"></a>
+
+<p style="margin: 0in 0in 0pt; font-size: 12pt;">&nbsp;</p>
+<p style="margin: 0in 0in 0pt; font-size: 13pt;"><b><font color="#000000">2014</font></b></p>
+
+
+
+
+
+<div id="tagDeep_tagVM_tagconf_tagStruct_tagFea_tagSC">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li>Y. He, K. Kavukcuoglu, Y. Wang, A. Szlam, <b>Y. Qi</b> (2014)
+  <br>"Unsupervised Feature Learning by Deep Sparse Coding", <i>SIAM 2014 International
+  Conference on Data Mining</i>
+  (<a href="http://www.siam.org/meetings/sdm14/">SDM2014</a>)
+  <font color="#38761d">(acceptance rate: 29% (120 out of total 389 submissions) )</font>
+  <br>
+  <font face="Arial,Helvetica"><font size=-1><font color="#990000">
+Unsupervised feature learning </font><font color="blue"> (Also presented and featured as the only three talks at <a href="https://sites.google.com/site/representationlearning2014/program-details/conference-program">ICLR 2014</a>.)
+  </font></font></font>
+</li>  </ul>
+</td>
+<td class="p3">
+(<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/2014_sdm_DeepSC.pdf">PDF</a>)
+(<a
+  href="http://arxiv.org/abs/1312.5783">Arxiv</a>)
+(<a href="http://www.cs.virginia.edu/yanjun/paperA14/2014-sdm-deepsc-talk.pdf">Talk</a>)
+
+ </td>
+</table>
+</div>
+
+
+
+
+
+<div id="tagDeep_tagCB_tagconf_tagFea_tagStruct_143">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li> <b>Y. Qi</b>, S. Das, R. Collobort and J. Weston (2014)
+  <br>"Deep Learning for Character-based Information Extraction",
+  <i>The European Conference on Information Retrieval</i>
+  (<a href="http://ecir2014.org">ECIR2014</a>)
+  <br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+Deep learning + Sequence Labeling
+  </font></font></font></li> </ul>
+</td>
+<td class="p3">
+(<a href="http://www.cs.cmu.edu/%7Eqyj/zhSenna/2014_ecir2014_full.pdf">PDF</a>)
+  (<a
+  href="http://www.cs.cmu.edu/%7Eqyj/zhSenna/">Web</a>)
+  (<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/2014_ecir_deep.pdf">Talk</a>)
+  
+ </td>
+</table>
+   </div>
+
+
+
+<div id="tagbestp_tagSY_tagStruct_146">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li>J. Gong, P. Asare, J. Lach, <b>Y. Qi</b>, (2014)
+  <br>"Piecewise Linear Dynamical Model for Actions Clustering from
+    Inertial Body Sensors with Considerations of Human Factors",
+    <i>BodyNets 2014 : 9th International Conference on Body Area Networks</i>
+  (<a href="http://bodynets.org/2014/show/home">BodyNets2014</a>)
+   <br>
+  <font face="Arial,Helvetica"> <font color="blue">
+  <b>(Best Paper Award !)</b></font> <font color="#990000"><font size=-1>
+  Temporal Data Segmentation + sensor data + Human activity Recognition
+  </font></font></font></li></ul>
+</td>
+<td class="p3">
+ (<a
+  href="paperA14/201408_bodynets.pdf">PDF</a>) (<a
+  href="paperA14/2014-BodyNetsBestPaper.pdf">Talk</a>)
+
+ </td>
+</table>
+   </div>
+
+
+
+<div id="tagCB_tagworkshop_tagSemi_144">
+  <table class="pp">
+ <td class="p1">
+<ul>
+<li>F. Xiong, M. Kam, L. Hrebien, and <b>Y. Qi</b> (2014)
+  <br>"Ranking with Distance Metric Learning for Biomedical Severity Detection", <i>SIAM 2014 International
+  Conference on Data Mining</i>
+  (<a href="http://www.siam.org/meetings/sdm14/">SDM2014</a>), 3rd
+  Workshop on Data Mining for Medicine andHealthcare (<a href="http://www.dmmh.org">DMMH</a>)
+  <br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+   Distance metric learning + Biomedical Severity
+  </font></font></font></li>  </ul>
+</td>
+<td class="p3">
+ (<a href="paperA14/2014_metricwk.pdf">PDF</a>)
+
+ </td>
+</table>
+</div>
+
+
+
+<div id="tagTex_tagconf_tagStruct_tagSemi_141">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li>S. Das, <b>Y. Qi</b>, P. Mitra, and L. Giles (2014)
+  <br>"Extracting Metadata from Academic Homepages using Labeled
+Features", <i>SIAM 2014 International
+  Conference on Data Mining</i>
+  (<a href="http://www.siam.org/meetings/sdm14/">SDM2014</a>)
+<font color="#38761d">(acceptance rate: 29% (120 total 389 submissions) )</font>  <br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+<!--Information extraction of metadata from researcher homepages using -->
+  <!--a semi-supervised learning method called feature labeling.
+-->
+  Semi-supervised feature learning + Web text mining
+  </font></font></font>
+</li>  </ul>
+</td>
+<td class="p3">
+    (<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/2014_sdm_meta.pdf">PDF</a>)
+    (<a href="paperA14/2014-sdm-201p.pdf">posterSlide</a>)
+
+ </td>
+</table>
+</div>
+
+
+<div id="tagCB_tagconf_tagGM_tagFea">
+<table class="pp">
+ <td class="p1">
+  <ul><li> R. Min,
+    S.A. Chowdhury, <b>Y. Qi</b>, A. Stewart, R.
+    Ostroff (2014)<br>
+  "An integrated approach to blood-based cancer diagnosis and
+    biomarker discovery", <i>The 19th Pacific Symposium on
+  Biocomputing (PSB) 19:87-98 </i>,  (<a
+    href="http://psb.stanford.edu">PSB14</a>)
+  <br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+<!---An integration approach to identify discriminative complex
+interactions among informative gene features for cancer diagnosis and -->
+    <!--biomarker discovery directly based on patient blood -->
+    <!--samples.
+-->
+   Supervised Feature Learning + Genomic data
+  </font></font></font></li> </ul>
+</td>
+<td class="p3">
+    (<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/2014_psbmin.pdf">PDF</a>)
+
+ </td>
+</table>
+ </div>
+
+
+<div id="tagVM_tagStruct_148">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li>  I.K. Kim, J. Steele, <b>Y. Qi</b> and M. Humphrey, (2014)
+  <br>"Comprehensive Elastic Resource Management to Ensure Predictable
+Performance for Scientific Applications on Public IaaS Clouds",
+    <i>IEEE/ACM 7th International Conference on Utility and Cloud Computing</i>
+  (<a href="http://computing.derby.ac.uk/ucc2014/">UCC</a>)
+  <br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  Supervised Local Learning approach + system-level data about cloud system
+  </font></font></font></li>  </ul>
+</td>
+<td class="p3">
+ (<a href="paperA14/2014-UCC_LCA_Prelim_ik2sb.pdf">PDF</a>)
+
+ </td>
+</table>
+</div>
+
+
+
+
+<div id="tagDeep_tagTex_tagconf_tagFea_tagGM_146">
+<table class="pp">
+ <td class="p1">
+
+  <ul>
+<li>MR Min, X. Ning, <b>Y. Qi</b>, C. Cheng, A. Bonner and M. Gerstein (2014)
+  <br>"Ensemble Learning Based Sparse High-Order Boltzmann Machine for
+    Unsupervised Feature Interaction Identification", <i>NIPS Machine
+    Learning for Computational Biology (MLCB) workshop</i>
+  <br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  Sparse learning + Structure Learning in Graphical Model
+  </font></font></font></li>  </ul>
+</td>
+<td class="p3">
+  (<a href="paperA14/2014-ELSHBMo.pdf">PDF</a>)
+
+ </td>
+</table>
+</div>
+
+
+
+
+     <a name="2013"></a>
+
+<p style="margin: 0in 0in 0pt; font-size: 12pt;">&nbsp;</p>
+<p style="margin: 0in 0in 0pt; font-size: 13pt;"><b><font color="#000000">2013</font></b></p>
+
+
+<div id="tagDeep_tagCB_tagpatent_tagVI_tagFea_tagGM_134">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li> R. Min and <b>Y. Qi</b>  (2013) <br>
+Sparse high-order boltzmann machine for identifying combinatorial interactions between transcription factors,
+<i> US Patent App. 13/908,715, 2013 </i>,
+<br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  <!--We propose a novel system for identifying combinatorial
+  interactions between transcription factors using a sparse high-order
+  Boltzmann Machine aproach. -->
+   Learning Conditional Dependency among Variables + Network biology
+  </font></font></font>
+</li>  </ul>
+</td>
+<td class="p3">
+  <a
+  href="http://patents.justia.com/patent/20130325786">(URL)</a>
+
+ </td>
+</table>
+</div>
+
+
+<div id="tagCB_tagTex_tagpatent_tagFea_tagGM_133">
+<table class="pp">
+ <td class="p1">
+
+<ul>
+<li> Y. He, <b>Y. Qi</b>, K. Kavukcuoglu (2013) <br>
+Latent Factor Dependency Structure Determination,
+<i> US Patent 20,130,091,081, 2013 (Granted)</i>
+<br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  <!--We propose a general learning framework for inducing a sparse
+  undirected graphical model on
+  the vector of latent factors in LFA. -->
+   Learning Conditional Dependency among Latent Variables + Image/Text
+  data
+  </font></font></font>
+</li>  </ul>
+</td>
+</table>
+</div>
+
+
+<div id="tagDeep_tagTex_tagpatent_tagStruct_tagVI_tagFea_132">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li> <b>Y. Qi</b> and B. Bai  (2013) <br>
+Document Classification with Weighted Supervized n-gram Embedding,
+<i> US Patent 20,120,310,627, 2013 (Granted)</i>
+<br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+ <!--We propose a novel deep learning system for embedding the input text into the latent space based on the
+embedded n-grams and weighting said n-grams according to spatial
+     evidence. -->
+  Deep learning for n-gram embedding + Text Language data
+  </font></font></font>
+</li>  </ul>
+</td>
+</table>
+</div>
+
+
+
+
+
+<div id="tagDeep_tagTex_tagpatent_tagFea_131">
+<table class="pp">
+ <td class="p1">
+
+<ul>
+<li> X. Chen, <b>Y. Qi</b> and B. Bai (2013) <br>
+System and methods for finding hidden topics of documents and preference ranking documents,
+<i> US Patent 20,120,323,825 (Granted) </i>
+
+<br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+   <!---We propose and demonstrate systems and methods for preference learning on a set of
+documents using learned representations. Low-rank and sparsity
+  strategies are utilized to reduce the high-dimensionality issue. -->
+  Sparse Learning + Text Ranking
+  </font></font></font>
+</li> </ul>
+</td>
+</table>
+ </div>
+
+
+     <a name="2012"></a>
+
+<p style="margin: 0in 0in 0pt; font-size: 12pt;">&nbsp;</p>
+<p style="margin: 0in 0in 0pt; font-size: 13pt;"><b><font color="#000000">2012</font></b></p>
+
+
+<div id="tagDeep_tagCB_tagTex_tagconf_tagFea_128">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li><b>Y. Qi</b>, and  P. Laquerre  (2012) <br>
+Retrieving Medical Records with sennamed: NEC Labs America
+at TREC 2012 Medical Record Track,
+<i> Proceedings of the 2012 Text Retrieval Conference </i>
+<br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+We won the 2nd place among all 82 TREC Medical Track Automatic submissions. Ranks at the 3rd place among all TREC Medical submissions (82 automatic + 6 manual) </font></font></font>
+</li> </ul>
+</td>
+<td class="p3">
+  <a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/12_sennamed.pdf">(PDF)</a>,
+(<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/12_sennamed.bib">bibTex</a>)
+
+ </td>
+</table>
+ </div>
+
+
+<div id="tagDeep_tagCB_tagjournal_tagFea_tagStruct_tagSemi_127_tagshCode_tagshData">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li><b>Y. Qi</b>, M. Osh, J. Weston, W. Noble (2012) <br>
+A unified multitask architecture for predicting local protein properties,
+<i> PLoS ONE (March 2012)</i>
+<font
+    color="#38761d">(Impact Factor 4.411)</font>
+<br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+   <!--We propose a deep neural network architecture that, given a
+     protein sequence, outputs a host of predicted local properties
+     using multitask learning. -->
+  Deep neural network architecture + Protein Sequence Labeling
+  </font></font></font>
+</li>  </ul>
+</td>
+<td class="p3">
+  <a href="./paperA14/2012-DeepProtein.pdf">(PDF)</a>,
+  <a href="http://dx.plos.org/10.1371/journal.pone.0032235">(Online)</a>,
+(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/12_plosOne.bib">bibTex</a>),
+(<a href="https://github.com/DeepLearning4BioSeqText/Paper12-PlosOne-DeepProteinMultitaskTagging">Site</a>)
+<a  href="http://noble.gs.washington.edu/proj/multitask">(Data)</a>
+</td>
+</table>
+</div>
+
+<br>
+
+<div id="tagTex_tagconf_tagFea_tagGM_126_tagshCode">
+<table class="pp">
+ <td class="p1">
+
+<ul>
+<li>Y. He, <b>Y. Qi</b>, K. Kavukcuoglu, H. Park (2012) <br>"Learning the Dependency Structure of Latent Factors",
+<a href="http://nips.cc/Conferences/2012/" rel="nofollow">NIPS
+ 2012</a>(<a href="">online</a>)
+<font color="#38761d">(acceptance rate: 25% (=370/1467 submissions) )</font><br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+ <!--A novel latent factor model which models the (pairwise) -->
+  <!--statistical dependency structure between latent factors.
+ -->
+  Latent Factor Model + Sparse Gaussian Graphical Model
+  </font></font></font>
+ <br> <font face="Arial,Helvetica"><font color="blue"><font size=-1>
+  *ERRATUM*: the equation under Eq(13) has missed B^T. Issue fixed in the version here.  </front></font></font></font>
+</li>  </ul>
+</td>
+<td class="p3">
+  (<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/12-slfa.pdf">PDF</a>)
+(<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/12_nips.bib">bibTex</a>)
+(<a href="http://www.cs.virginia.edu/yanjun/paperA14/2012_SLFA_NIPS.pdf">Talk</a>)  (<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/12-nips-poster.pdf">Poster</a>)
+
+  (<a href="https://github.com/DataFusion4NetBio/Paper12-NIPS-SparseGGM4LatentFactors">Code</a>)
+</td>
+</table>
+</div>
+
+
+
+<div id="tagCB_tagbook_tagSemi_125_tagshCode">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li><b>Y. Qi&nbsp;</b> (2012)&nbsp;<br>
+  Random Forest for Bioinformatics, <i>Invited chapter in Springer book: "Ensemble Learning: Methods and Applications" </i> -> <a
+  href="http://www.springer.com/statistics/book/">(book
+  OnlineLink)</a>,
+<br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  Review of recent efforts related to random forest in bioinformatics.
+  </font></font></font>
+</li></ul>
+</td>
+<td class="p3">
+  <a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/11-rfbook.pdf">(Chapter-PDF)</a>
+<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/12_rfbiobookc.bib">(bibTex)</a>
+
+(<a href="https://github.com/DataFusion4NetBio/RF4Bioinformatics">Code</a>)
+ </td>
+</table>
+  </div>
+
+<div id="tagDeep_tagTex_tagconf_tagStruct_tagVI_tagFea_124_tagshData">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li>D. Bespalov, <b>Y. Qi</b>, B. Bai, A. Shokoufandeh,  (2012) <br>"Sentiment Classification with Supervised Sequence Encoder",<i>The European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD) </i>(<a
+  href="http://www.ecmlpkdd2012.net/">ECML2012</a>)
+<font color="#38761d">(acceptance rate: 23% (total 443 submissions) )</font><br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  Deep Learning + ngram embedding + sentiment classification.
+  </font></font></font>
+ <br> <font face="Arial,Helvetica"><font color="blue"><font size=-1>
+  *ERRATUM*: Old data sharing site "http://mst.cs.drexel.edu/datasets/ECML2012" not working anymore. Now we put
+  data @  (<a href="http://www.cs.virginia.edu/yanjun/paperA14/ecml12-cikm11-deepSC.htm">DataSharing</a>)
+  </font></font></font>
+</li>  </ul>
+</td>
+<td class="p3">
+  (<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/sse_ecml12_camready.pdf"
+  rel="nofollow" style="color: blue;text-decoration:underline;">PDF</a>) (<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/12_ecml_sse.bib">bibTex</a>)
+(<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/12-talk-ecml2012-qyj.pdf">Talk</a>)
+
+  (<a href="http://www.cs.virginia.edu/yanjun/paperA14/ecml12-cikm11-deepSC.htm">Data</a>)
+ </td>
+</table>
+</div>
+
+
+<div id="tagDeep_tagTex_tagconf_tagStruct_tagFea_tagDeep_123">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li>D. Bespalov, <b>Y. Qi</b>, B. Bai, A. Shokoufandeh,  (2012) <br>"Large-scale Image Classification Using Supervised Spatial Encoder",<i>the twenty-first conference of the International Association for Pattern Recognition </i>(<a
+  href="http://www.icpr2012.org/index.html">ICPR2012</a>)
+<font color="#38761d">(acceptance rate: )</font><br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+   Deep Learning + fast large-scale spatial pooling + image classification.
+  </font></font></font></li> </ul>
+</td>
+<td class="p3">
+  (<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/12-icpr.pdf"
+  rel="nofollow" style="color: blue;text-decoration:underline;">PDF</a>) (<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/12_icpr.bib">bibTex</a>)
+(<a href="http://karma.cs.drexel.edu/~dmitriy/sse_icpr12_poster.pdf">Talk</a>)
+
+ </td>
+</table>
+ </div>
+
+<div id="tagCB_tagconf_tagGM_122">
+<table class="pp">
+ <td class="p1">
+  <ul><li> Ilia Nouretdinov, Alex Gammerman, <b>Y. Qi</b>, J. Klein-Seetharaman (2012)<br> "Determining confidence of predicted interactions between HIV-1 and human proteins using conformal method", <i>17th Pacific Symposium on Biocomputing (PSB) Jan 2012,</i>
+<br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  <!--Applied a conformal prediction framework to estimate the -->
+    <!--confidence of HIV-1 virus to human protein interaction -->
+    <!--predictions. -->
+    Conformal Prediction + Network biology
+    </font></font></font>
+</li>
+</ul>
+</td>
+<td class="p3">
+  (<a href="http://www.cs.cmu.edu/%7Eqyj/HIVsemi/12_psb_hiv.pdf" rel="nofollow" style="color: blue; text-decoration: underline;">PDF</a>)(<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/12_psb_hiv.bib">bibTex</a>)
+
+</td>
+</table>
+ </div>
+
+
+<div id="tagDeep_tagTex_tagpatent_tagStruct_tagFea_tagDeep_121">
+<table class="pp">
+ <td class="p1">
+
+<ul>
+<li> D. Bespalov, <b>Y. Qi</b>, B. Bai, (2012) <br>
+Sentiment Classification Based on Supervised Latent n-gram Analysis,
+<i> US Patent 20,120,253,792, 2012 (Granted) </i>
+<br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  <!--We propose a method for sentiment classification of a text -->
+  <!--document using high-order n-grams modeling with a multilevel deep embedding strategy. -->
+  Deep Learning + ngram Embedding + Sentiment Classification
+  </font></font></font>
+</li>  </ul>
+</td>
+<td class="p3">
+(<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/12_sennamed.bib">bibTex</a>)
+
+ </td>
+</table>
+</div>
+
+
+     <a name="2011"></a>
+
+<p style="margin: 0in 0in 0pt; font-size: 12pt;">&nbsp;</p>
+<p style="margin: 0in 0in 0pt; font-size: 13pt;"><b><font color="#000000">2011</font></b></p>
+
+
+
+<div id="tagCB_tagbook_tagGM_116">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li><b>Y. Qi&nbsp;</b>, W. Noble&nbsp; (2011)&nbsp;<br>
+ Protein Interaction Networks: Protein Domain Interaction and &nbsp;
+  Protein Function Prediction , <i>Invited chapter in book:  Handbook of Computational&nbsp;Statistics: Statistical Bioinformatics </i> -> <a
+  href="http://www.springer.com/statistics/book/978-3-642-16344-9">(book
+  OnlineLink)</a>,
+<br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+ <!---A review of recent efforts to predict interactions -->
+ <!-- between proteins and between
+ protein domains.-->
+  Network biology + Relational data mining
+  </font></font></font>
+</li>  </ul>
+</td>
+<td class="p3">
+<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/ppipdibookch10.pdf">(Chapter-PDF)</a>
+<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/11_ppibookc.bib">(bibTex)</a>
+
+ </td>
+</table>
+</div>
+
+
+
+<div id="tagTex_tagconf_tagFea_tagSC_115_tagshCode">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li>X. Chen, <b>Y. Qi</b>, B. Bai, Q. Lin, J.G. Carbonell (2011)
+  <br>"Sparse Latent Semantic Analysis", <i>SIAM 2011 International
+  Conference on Data Mining</i> (<a
+  href="http://www.siam.org/meetings/sdm11/">SDM2011</a>)
+   <font color="#38761d">(acceptance rate: 25% =
+  86/343)</font><br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  <!--Modification of Latent Semantic Analysis to produce a sparse projection matrix via
+  the L1 regularization. Two important extensions: group structured -->
+  <!--Sparse LSA and non-negative Sparse LSA. -->
+  Spare Learning + Factor Model + Text topic modeling
+  </font></font></font>
+</li></ul>
+</td>
+<td class="p3">
+(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/SLSA-sdm11.pdf"
+  rel="nofollow" style="color: blue; text-decoration:
+  underline;">PDF</a>)
+  (<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/11-talk-sdm11-slsa.pdf">Talk</a>)
+  (<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/11_sdm_ssi.bib">bibTex</a>)
+
+(<a href="https://github.com/DeepLearning4BioSeqText/SparseLSA">Code</a>)
+ </td>
+</table>
+</div>
+
+
+ <div id="tagDeep_tagCB_tagTex_tagconf_tagStruct_tagSemi_tagStruct_114">
+<table class="pp">
+ <td class="p1">
+
+<ul>
+<li>X. Ning, <b>Y. Qi</b> (2011) <br>"Semi-Supervised Convolution
+  Graph Kernels for Relation Extraction",<i> SIAM 2011 International
+  Conference on Data Mining </i>(<a
+  href="http://www.siam.org/meetings/sdm11/">SDM2011</a>)
+<font color="#38761d">(acceptance rate: 25% = 86/343)</font><br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  <!---A novel semi-supervised convolution graph kernel method for -->
+  <!--solving relation extraction task. Three levels of semi -->
+  <!--supervisions added to compare natural sentences with soft matches.-->
+  Graph Kernel + Semi-supervised Learning + Relation Extraction from Text
+  </font></font></font></li> </ul>
+</td>
+<td class="p3">
+(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/SSCG-sdm11.pdf"
+  rel="nofollow" style="color: blue;text-decoration:
+  underline;">PDF</a>) (<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/11_sdm_sk.bib">bibTex</a>)
+(<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/11-talk-sdm11-sgk.pdf">Talk</a>)
+
+ </td>
+</table>
+ </div>
+
+
+<div id="tagDeep_tagTex_tagconf_tagDeep_tagFea_tagStruct_113_tagshData">
+<table class="pp">
+ <td class="p1">
+
+<ul>
+<li>D. Bespalov, B. Bai, <b>Y. Qi</b>, A. Shokoufandeh (2011) <br>"Sentiment Classification Based on
+Supervised Latent n-gram Analysis",<i>20th ACM Conference on Information and Knowledge Management</i>
+(<a href="http://www.cikm2011.org/">CIKM2011</a>)
+<font color="#38761d">(acceptance rate: as full paper 15% out of 917)</font><br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  <!--A novel approach for sentimental classification by latent n-gram -->
+  <!--analysis. The system has multiple layers to perform word -->
+  <!--embedding, phrase embedding, and document embedding. -->
+  Deep Learning + Latent ngram embedding + Sentiment classification
+  </font></font></font>
+ <br> <font face="Arial,Helvetica"><font color="blue"><font size=-1>
+  *ERRATUM*: Old data sharing site "http://mst.cs.drexel.edu/datasets/CIKM2011" not working anymore. Now we put
+  data @  (<a href="http://www.cs.virginia.edu/yanjun/paperA14/ecml12-cikm11-deepSC.htm">DataSharing</a>) </font></font></font>
+</li> </ul>
+</td>
+<td class="p3">
+(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/11-cikm.pdf"
+  rel="nofollow" style="color: blue;text-decoration:underline;">PDF</a>) (<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/11_cikm_sa.bib">bibTex</a>)
+(<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/11-talk-cikm11.pdf">Talk</a>)
+
+(<a href="http://www.cs.virginia.edu/yanjun/paperA14/ecml12-cikm11-deepSC.htm">Data</a>) </td>
+</table>
+ </div>
+
+<div id="tagTex_tagworkshop_tagFea_tagSC_tagGM_112">
+<table class="pp">
+ <td class="p1">
+
+<ul>
+<li>Y. He, K. Kavukcuoglu, <b>Y. Qi</b>, H. Park (2011)
+  <br>"Structured Latent Factor Analysis",<i>NIPS 2011 Workshop:
+  Challenges in Learning Hierarchical Models: Transfer Learning and
+  Optimization</i>
+ <br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  Sparse Gaussian Graphical Modeling among Latent Factors
+  </font></font></font>
+</li> </ul>
+</td>
+<td class="p3">
+(<a
+  href="http://sites.google.com/site/nips2011workshop/schedule">online</a>)(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/11-slfa.pdf">PDF</a>)
+
+ </td>
+</table>
+ </div>
+
+
+
+
+<div id="tagDeep_tagTex_tagpatent_tagStruct_tagSemi_tagStruct">
+<table class="pp">
+ <td class="p1">
+
+<ul>
+<li> <b>Y. Qi</b>, X. Ning, P. Kuksa, B. Bai, (2011) <br>
+Systems and methods for semi-supervised relationship extraction,
+<i> US Patent App. 13/078,985, 2011 / (US Patent 8,874,432, 2014 Granted)</i>
+<br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+   <!--We propose and demonstrate a system for performing relation -->
+  <!--extraction in text by applying a -->
+  <!--convolution strategy to determine a kernel between sentences. Multiple -->
+  <!--semi-supervised strategies are added in the kernel calculation -->
+  <!--to encode syntactic and semantic information.-->
+  Semi-supervised learning + Relationship extraction
+  </font></font></font>
+</li>  </ul>
+</td>
+<td class="p3">
+(<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/12_sennamed.bib">bibTex</a>)
+
+ </td>
+</table>
+</div>
+
+     <a name="2010"></a>
+
+<p style="margin: 0in 0in 0pt; font-size: 12pt;">&nbsp;</p>
+<p style="margin: 0in 0in 0pt; font-size: 13pt;"><b><font color="#000000">2010</font></b></p>
+
+
+<div id="tagDeep_tagCB_tagjournalL_tagconf_tagGM_tagDeep_tagSemi_tagRel_105_tagshCode_tagshData">
+<table class="pp">
+ <td class="p1">
+  <ul>
+<li><b>Y. Qi</b>, O.Tastan, J. Carbonell, J. Klein-Seetharaman, J. Weston (2010)<br>
+"Semi-Supervised Multi-Task Learning for Predicting Interactions between HIV-1 and Human Proteins", <i>Bioinformatics 2010</i>
+ <font
+    color="#38761d">(Impact Factor 4.328) (acceptance rate of ECCB10:
+    17% = 36/215)</font>
+<br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  <!--Proposed a semi-supervised multi-task framework to predict -->
+    <!--missing edges on protein interaction graph from not only -->
+    <!--labeled, but also partially labeled reference sets. -->
+    Multi-task learning + Relational data + Network biology
+    </font></font></font>
+</li>
+ </ul>
+</td>
+<td class="p3">
+(<a href="http://www.cs.cmu.edu/%7Eqyj/HIVsemi/hivPPI-eccb10.pdf" rel="nofollow" style="color: blue; text-decoration: underline;">PDF</a>)
+(<a href="http://bioinformatics.oxfordjournals.org/content/26/18/i645.full.html?
+ijkey=dt1ehmQwKTnTHp9&keytype=ref">Online</a>)(<a
+    href="http://www.cs.cmu.edu/%7Eqyj/HIVsemi/eccb10-Talk-online.pdf"
+    rel="nofollow" style="color:
+    purple;text-decoration:underline;">Talk</a>)
+    (<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/10_eccb_hiv.bib">bibTex</a>)
+
+    (<a href="https://github.com/DataFusion4NetBio/Papers-HIV1toHuman-PPISupervised">Code</a>)
+    (<a href="http://www.cs.cmu.edu/%7Eqyj/HIVsemi/index.html" rel="nofollow" style="color: blue; text-decoration: underline;">Data</a>)
+  </td>
+</table>
+ </div>
+
+
+
+
+<div id="tagDeep_tagTex_tagconf_tagSemi_tagFea_tagStruct_104">
+<table class="pp">
+ <td class="p1">
+
+<ul><li>P. Kuksa,&nbsp;&nbsp;<b>Y. Qi&nbsp;</b>(2010)&nbsp;<br>
+"Semi-Supervised Bio-Named Entity Recognition with Word-Codebook
+  Learning"&nbsp;"<a href="http://www.siam.org/meetings/sdm10/"
+  rel="nofollow">SDM2010</a> <font color="#38761d">(regular paper acceptance rate: 23% =
+  82/351)</font>
+<br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  <!--Learns a class of word-level distribution features to capture -->
+  <!--word semantic meanings or word label patterns from a large
+  unlabeled corpus.  -->
+  Feature learning + Information extraction
+  </font></font></font>
+</li> </ul>
+</td>
+<td class="p3">
+(<a  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/bNER-sdm10.pdf"
+  rel="nofollow"><font color="#0000ff">PDF</font></a>)
+  (<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/10_sdm_ner.bib">bibTex</a>)
+
+ </td>
+</table>
+ </div>
+
+
+<div id="tagDeep_tagTex_tagconf_tagStruct_tagSemi_tagFea_103">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li>P. Kuksa, <b>Y. Qi</b>, B. Bai, R. Collobert, J.Weston,
+  V. Pavlovic, X. Ning  (2010) <br>"Semi-Supervised
+  Abstraction-Augmented String Kernel for Multi-Level Bio-Relation
+  Extraction", <i> ECML PKDD 2010 ( European Conference on Machine
+  Learning and Principles and Practice of Knowledge Discovery in
+  Databases )</i>, <font
+  color="#38761d">(acceptance rate of ECML10: 16.7% =
+  110/658)</font>
+  <br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+   Semi-supervisions + Mismatch string kernel framework.
+  </font></font></font>
+</li> </ul>
+</td>
+<td class="p3">
+(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/ecml10.pdf"
+  rel="nofollow" style="color: blue; text-decoration:
+  underline;">PDF</a>)(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/ecml10-Talk-online.pdf"
+  rel="nofollow" style="color: purple;
+  text-decoration:underline;">Talk</a>)  (<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/10_ecml_ask.bib">bibTex</a>)
+
+ </td>
+</table>
+ </div>
+
+
+<div id="tagTex_tagworkshop_tagFea_tagSC_102">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li>X. Chen, <b>Y. Qi</b>, B. Bai, Q. Lin, J.G. Carbonell (2010)
+  <br>"Sparse Latent Semantic Analysis", <i> NIPS Workshop on
+  Practical Application of Sparse Modeling: Open Issues and New
+  Directions </i> (2010)
+  <br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  Sparse learning + Latent semantic analysis + Text data
+  </font></font></font>
+</li>  </ul>
+</td>
+<td class="p3">
+(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/SLSA-nips10-v1.pdf"
+  rel="nofollow" style="color: blue; text-decoration:
+  underline;">PDF</a>)
+
+ </td>
+</table>
+</div>
+
+
+<div id="tagTex_tagconf_tagFea_tagDeep_tagSC">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li>X. Chen, B. Bai, <b>Y. Qi</b>, Q. Lin, J. Carbonell,(2010) <br>
+"Learning Preferences using Millions of Features by Enforcing
+  Sparsity" <a href="http://datamining.it.uts.edu.au/icdm10/"
+  rel="nofollow"><font color="#0000ff">IEEE  ICDM 2010</font></a>
+  <font color="#38761d">(short paper acceptance rate: 19% =
+  (72+83)/797 )</font> <br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+   <!--To learn a sparse representation of the pairwise features under -->
+   <!-- the preference learning framework using the L1
+  regularization. -->
+  Sparse learning + Text ranking + Feature learning
+  </font></font></font>
+</li> </ul>
+</td>
+<td class="p3">
+(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/sparse-icdm10.pdf"
+  rel="nofollow"><font color="#0000ff">PDF</font></a>)<BR>(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/sparse-icdm10-slide.pdf"
+  rel="nofollow"><font color="#0000ff">Talk</font></a>)  (<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/10_icdm_spr.bib">bibTex</a>)
+
+ </td>
+</table>
+</div>
+
+
+
+     <a name="2009"></a>
+
+<p style="margin: 0in 0in 0pt; font-size: 12pt;">&nbsp;</p>
+<p style="margin: 0in 0in 0pt; font-size: 13pt;"><b><font color="#000000">2009</font></b></p>
+
+
+
+<div id="tagDeep_tagTex_tagconf_tagStruct_tagSemi_tagFea_098">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li><b>Y. Qi</b>, P. Kuksa, R. Collobert,&nbsp;K. Sadamasa,&nbsp;K. Kavukcuoglu, J. Weston,(2009) <br>
+"Semi-Supervised Sequence Labeling with Self-Learned Feature" <a
+  href="http://www.cs.umbc.edu/ICDM09/" rel="nofollow"><font
+  color="#0000ff">IEEE ICDM 2009</font></a> <font
+  color="#38761d">(regular paper acceptance rate: 9% =
+  70/786)</font><br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  <!-- A semisupervised approach to improve sequence labeling through-->
+  <!-- self-learned class label distribution patterns for each
+  word.-->
+  Feature learning + Semi-supervised learning + Sequence labeling
+  </font></font></font>
+</li>
+</ul>
+</td>
+<td class="p3">
+ (<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/selfFea-icdm09-c5.pdf"
+  rel="nofollow"><font color="#0000ff">PDF</font></a>)<br>(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/ICDM09-slidesv2.pdf"
+  rel="nofollow"><font color="#0000ff">Talk</font></a>) (<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/09_icdm_wcl.bib">bibTex</a>)
+
+ </td>
+</table>
+ </div>
+
+
+<div id="tagDeep_tagTex_tagconf_tagStruct_tagSemi_tagFea_097">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li><b>Y. Qi</b>, R. Collobert, P. Kuksa, K. Kavukcuoglu, J. Weston,(2009)
+<br>
+"Combining Labeled and Unlabeled Data for Word-Class Distribution" <a
+  href="http://www.comp.polyu.edu.hk/conference/cikm2009/about/"
+  rel="nofollow"><font color="#0000ff">CIKM 2009</font></a>&nbsp;<font
+  color="#38761d"> (short paper acceptance rate: 20% = (171 +
+  123)/847)</font> <br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  <!-- A semisupervised approach to improve sequence labeling through
+  self-learned class label distribution patterns for each word on the
+  unlabeled sequences.-->
+  Feature learning + Semi-supervised learning + Sequence labeling
+  </font></font></font>
+</li>
+</ul>
+</td>
+<td class="p3">
+(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/wcdl-cikm09.pdf"
+  rel="nofollow"><font color="#0000ff">PDF</font></a>)<br>
+  (<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/09_cikm_wcl.bib">bibTex</a>)
+
+ </td>
+</table>
+ </div>
+
+<div id="tagCB_tagjournal_tagGM_tagIF_096_tagshCode_tagshData">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li><b>Y. Qi</b>, HK. Dhiman, et al, Z. Bar-Joseph, J. Klein-Seetharaman,(2009) <br>
+"Systematic prediction of human membrane receptor interactions",x (<a
+  href="http://www.wiley-vch.de/publish/en/journals/alphabeticIndex/2120/"
+  rel="nofollow"><font color="#0000ff">PROTEOMICS</font></a> 2009, 9,
+  5243-5255 <font color="#38761d">(Impact Factor 5.479)</font></font><br>
+  <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  <!--Systematically integrating computational PPI predictions,-->
+  <!--global analyses, biological experimentation and expert feedback.-->
+  Supervised Information integraion + Network biology + Experimental design
+  </font></font></font>
+</li>
+</ul>
+</td>
+<td class="p3">
+ (<a
+  href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3076061/"
+  rel="nofollow">URL</a>)
+  <a
+  href="http://www.cs.cmu.edu/~qyj/HMRI/HMRI_ISMBhightlight_online.pdf">(Talk)
+  </a>
+  (<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/09_Proteomics_ppi.bib">bibTex</a>)
+
+ (<a href="https://github.com/DataFusion4NetBio/Paper09-HumanReceptorPPI-HPPIPM">Code</a>)<br>
+ (<a href="http://www.cs.cmu.edu/%7Eqyj/HMRI"
+  rel="nofollow">Data</a>)
+ (<a href="http://www.cs.cmu.edu/%7Eqyj/HMRI"
+  rel="nofollow">Web</a>)
+   </td>
+</table>
+  </div>
+
+
+<div id="tagCB_tagconf_tagIF_tagGM_095_tagshCode_tagshData">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li>O. Tastan, <b>Y. Qi</b>, J.G. Carbonell, J. Klein-Seetharaman, (2009);<br>
+ Prediction of Interactions between HIV-1 and Human Proteins by
+  Information Integration , <i>Pacific Symposium on Biocomputing
+  14:&nbsp;</i>(<a href="http://psb.stanford.edu/" rel="nofollow"
+  style="color: blue; text-decoration: underline;">PSB-2009</a>
+  Jan. 2009 <br>
+   <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  <!--The first attempt to predict the global set of
+interactions between HIV-1 and human host cellular proteins.-->
+   Supervised Information integraion + Network biology
+  </font></font></font>
+</li>
+</ul>
+</td>
+<td class="p3">
+ (<a
+  href="http://www.cs.cmu.edu/~qyj/paper_CMU/2009-psb-HIV.pdf"
+  rel="nofollow" style="color: blue; text-decoration:
+  underline;">PDF</a>) (<a
+  href="paper_CMU/Tastan_PSB09_Final.pdf"
+  rel="nofollow" style="color: blue; text-decoration:
+  underline;">Talk</a>) (<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/09_psb_hiv.bib">bibTex</a>)
+(<a href="http://www.cs.cmu.edu/%7Eoznur/hiv/hivPPI.html"
+  rel="nofollow" style="color: blue; text-decoration:
+  underline;">Web</a>)<br>
+(<a href="http://www.cs.cmu.edu/%7Eoznur/hiv/hivPPI.html"
+  rel="nofollow" style="color: blue; text-decoration:
+  underline;">Data</a>)
+  
+  </td>
+</table>
+  </div>
+
+
+
+<div id="tagTex_tagconf_tagDeep_tagFea_tagGM_094">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li>B. Bai, J.Weston. D. Grangier, R. Collobert,&nbsp;K. Sadamasa,&nbsp;<b>Y. Qi</b>,&nbsp;C.&nbsp;&nbsp;Cortes,&nbsp;M Mohri,(2009)<br>
+"Polynomial Semantic Indexing"; <a
+  href="http://nips.cc/Conferences/2009/" rel="nofollow"> NIPS
+  2009</a> <font color="#38761d">(acceptance rate: 23% =
+  263/1105)</font>
+<br>
+   <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  <!--A class of nonlinear (polynomial) models that are discriminatively
+trained to directly map from the word content in query-document pair
+  to a ranking score. -->
+  Deep learning + Feature representation learning + Text ranking
+  </font></font></font>
+</li>
+</ul>
+</td>
+<td class="p3">
+ (<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/2009_psi_nips.pdf"
+  rel="nofollow"><font color="#0000ff">PDF</font></a>)
+  (<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/10_nips_ssi.bib">bibTex</a>)
+</td>
+
+</table>
+  </div>
+
+
+<div id="tagTex_tagconf_tagDeep_tagFea_093">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li>B. Bai, J.Weston. D. Grangier, R. Collobert,&nbsp;K. Sadamasa,&nbsp;<b>Y. Qi</b>, O. Chapelle, Kilian Weinberger, (2009)<br>
+"Supervised Semantic Indexing", <a
+  href="http://www.comp.polyu.edu.hk/conference/cikm2009/about/"
+  rel="nofollow">CIKM 2009&nbsp;</a><font color="#38761d">(regular
+  paper acceptance rate: 15% = 123/847) </font>
+<br>
+   <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  <!--An algorithm  trained on (query, document)
+pairs to predict the quality of their match on all pairs of
+words features.-->
+  Deep learning + Feature representation learning + Text ranking
+  </font></font></font>
+</li>
+</ul>
+</td>
+<td class="p3">
+(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/2009_ssi_cikm.pdf"
+  rel="nofollow"><font color="#0000ff">PDF</font></a>)(<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/09_cikm_ssi.bib">bibTex</a>)
+</td>
+
+</table>
+  </div>
+
+<div id="tagTex_tagjournal_tagDeep_tagFea_092">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li>B. Bai, J.Weston. D. Grangier, R. Collobert,&nbsp;K. Sadamasa,&nbsp;<b>Y. Qi</b>, O. Chapelle, Kilian Weinberger, (2009)<br>
+"Learning to Rank with (a Lot of) Word Features", <i>the special issue
+  on Learning to Rank of the Information Retrieval Journal.</i>    <br>
+   <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  <!--A class of algorithms  trained on (query, document)
+pairs to predict the quality of their match on all pairs of
+words features. -->
+  Deep learning + Feature representation learning + Text ranking
+  </font></font></font>
+</li>  </ul>
+</td>
+<td class="p3">
+(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/2009_ssi_jir.pdf"
+  rel="nofollow"><font color="#0000ff">PDF</font></a>)(<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/10_ir_ssi.bib">bibTex</a>)
+</td>
+
+</table>
+</div>
+
+
+<div id="tagTex_tagworkshop_tagFea_tagDeep_091">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li>B. Bai, J.Weston. D. Grangier, R. Collobert,&nbsp;K. Sadamasa,&nbsp;<b>Y. Qi</b>, O. Chapelle, Kilian Weinberger,(2009)<br>
+"Learning to Rank with Low Rank", <i>SIGIR 09 workshop: Learning to Rank for Information Retrieval</i><br>
+   <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  Deep learning + Feature representation learning + Text ranking
+  </font></font></font>
+</li>  </ul>
+</td>
+<td class="p3">
+</td>
+
+</table>
+</div>
+
+
+
+     <a name="2008"></a>
+
+<p style="margin: 0in 0in 0pt; font-size: 12pt;">&nbsp;</p>
+<p style="margin: 0in 0in 0pt; font-size: 13pt;"><b><font color="#000000">2008</font></b></p>
+
+
+<div id="tagthesis_tagGM_tagCB">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li><b>Y. Qi</b>, (2008) Learning of Protein Interaction Networks. <i> Ph.D. Dissertation (also CMU Technical Report: CMU-LTI-08-06),&nbsp;Carnegie&nbsp;MellonUniversity,
+&nbsp;School&nbsp;of&nbsp;Computer Science, May 2008 </i>
+
+<br>(Dissertation Committee: <a href="http://www.cs.cmu.edu/%7Ezivbj/" rel="nofollow"><font color="#0000ff">Ziv Bar-Joseph</font></a>,
+<a href="http://www.cs.cmu.edu/%7Ejudithks/" rel="nofollow"><font color="#0000ff">Judith Klein</font></a><font color="#0000ff">-Seetharaman, </font>
+<a href="http://www.cs.cmu.edu/%7Echristos/" rel="nofollow"><font color="#0000ff">Christos Faloutsos</font></a><font color="#0000ff">, </font>
+<a href="http://www.cs.cmu.edu/%7Ejgc/" rel="nofollow"><font color="#0000ff">Jaime Carbonell</font></a><font color="#0000ff">, </font>
+<a href="http://sbi.imim.es/staff/baldo.html" rel="nofollow"><font color="#0000ff">Baldo Oliva</font></a>)<br>
+   <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+   Supervised Information integraion + Structured Prediction + Network biology
+  </font></font></font>
+</li>
+</ul>
+</td>
+<td class="p3">
+(<a href="http://www.cs.cmu.edu/%7Eqyj/paper_CMU/qyj-disertation-v17-final.pdf" rel="nofollow" style="color: blue; text-decoration: underline;">PDF</a>)
+(<a href="http://www.cs.cmu.edu/%7Eqyj/paper_CMU/qyj-disertation-talkOnline.pdf" rel="nofollow"><font color="#0000ff">Talk</font></a>)
+(<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/08_cmu_dissertation.bib">bibTex</a>)
+
+ </td>
+</table>
+  </div>
+
+
+
+<div id="tagCB_tagjournalL_tagconf_tagGM_tagshCode_tagshData">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li><b>Y. Qi</b>, F. Balem, C. Faloutsos, J. Klein-Seetharaman, Z. Bar-Joseph, (2008)<br>
+ Protein Complex Identification by Supervised Graph Clustering ,
+  <i>Bioinformatics 2008,  24(13), i250-i268 (The 16th Annual
+  International Conference Intelligent Systems for Molecular Biology
+  (ISMB), July 2008, </i>  <font color="#38761d">(Impact Factor
+  4.328) (acceptance rate of ISMB08: 17% = 49/292)</font>
+  <br>
+   <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+   Supervised Information integraion + Structured Prediction + Network biology
+  </font></font></font>
+</li>
+</ul>
+</td>
+<td class="p3">
+(<a
+  href="http://bioinformatics.oxfordjournals.org/cgi/content/abstract/24/13/i250?etoc"
+  rel="nofollow" style="color: blue; text-decoration:
+  underline;">Online</a>)(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/paper_CMU/ISMB08_qyj.pdf"
+  rel="nofollow" style="color: blue; text-decoration:
+  underline;">PDF</a>)<br>
+  (<a
+  href="http://www.cs.cmu.edu/%7Eqyj/SuperComplex/sharefiles/complex-Talk-online.pdf"
+  rel="nofollow" style="color: purple; text-decoration:
+  underline;">Talk</a>)
+ (<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/08_ismb_complex.bib">bibTex</a>)
+
+  (<a href="https://github.com/DataFusion4NetBio/Paper08-ISMB-ProteinComplex-GraphModule">Code</a>)
+<br>(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/SuperComplex/index.html"
+  rel="nofollow" style="color: blue; text-decoration:
+  underline;">Web</a>)<br>
+(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/SuperComplex/index.html"
+  rel="nofollow" style="color: blue; text-decoration:
+  underline;">Data</a>)
+</td>
+</table>
+  </div>
+
+
+<div id="tagCB_tagjournal_tagGM_tagIF_tagRel_082">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li>L. Pena-Castillo, et al,&nbsp;<b>Y. Qi</b>, et al, F.P. Roth,(2008)<br>
+ A Critical Assessment of M. Musculus Gene Function Prediction using Integrated Genomic Evidence ,&nbsp;<i> Genome Biology , 9(S1):S2,&nbsp;June&nbsp;2008 </i>
+<font color="#38761d">(Impact Factor 6.15)</font><br>
+   <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+   Supervised Information integraion + Structured Prediction +
+  Hierarchical Output
+  </font></font></font>
+</li>
+  </ul>
+</td>
+<td class="p3">
+ (<a href="http://genomebiology.com/2008/9/S1/S2" rel="nofollow" style="color: blue; text-decoration: underline;">Online</a>)
+  (<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/08_gm_func.bib">bibTex</a>)
+</td>
+
+</table>
+</div>
+
+
+<div id="tagCB_tagjournal_tagSemi_081">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li>H. Nozawa,G. Howell, S. Suzuki, Q. Zhang,&nbsp;<b>Y. Qi</b>, J. Klein-Seetharaman, A. Wells, J.R. Grandis, S.M. Thomas,(2008)<br>
+ Combined inhibition of PLC-1 and&nbsp;c-Src abrogates Epidermal
+  Growth Factor Receptor-mediated head and neck squamous cell
+  carcinoma invasion , <i>Clinical Cancer
+  Research,&nbsp;14:4336-43,&nbsp; 2008 </i> <font color="#38761d">(Impact Factor 6.488)</font>
+ <br>
+   <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+   Network biology
+  </font></font></font>
+</li></ul>
+</td>
+<td class="p3">
+(<a
+  href="http://clincancerres.aacrjournals.org/cgi/content/abstract/14/13/4336"
+  rel="nofollow" style="color: blue;text-decoration:
+  underline;">online</a>) (<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/08_cancer_egfr.bib">bibTex</a>)
+
+ </td>
+</table>
+</div>
+
+
+
+     <a name="2007"></a>
+
+<p style="margin: 0in 0in 0pt; font-size: 12pt;">&nbsp;</p>
+<p style="margin: 0in 0in 0pt; font-size: 13pt;"><b><font color="#000000">2007</font></b></p>
+
+
+<div id="tagCB_tagjournal_tagIF_tagGM_tagFA_071_tagshData">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li><b>Y. Qi</b>, J. Klein-Seetharaman, Z. Bar-Joseph, (2007)<br>
+"A mixture of feature experts approach for protein-protein interaction
+  prediction", <i>BMC Bioinformatics&nbsp;8</i>(S10) S6, 2007
+   <font color="#38761d">(Impact Factor 3.78)</font><br>
+   <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+   Supervised Information integraion + Structured Prediction + Network biology
+  </font></font></font>
+</li></ul>
+</td>
+<td class="p3">
+(<a
+  href="http://www.biomedcentral.com/1471-2105/8/S10/S6"
+  rel="nofollow" style="color: blue; text-decoration:
+  underline;">Online</a>) (<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papers_sulp/bmc_mfe_onlinecomplete.pdf"
+  rel="nofollow" style="color: blue; text-decoration:
+  underline;">PDF</a>) (<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/07_bmc_ppi.bib">bibTex</a>)
+
+(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papers_sulp/mfe07_bmc.html"
+  rel="nofollow" style="color: blue; text-decoration:
+  underline;">SWeb</a>) </td>
+</table>
+</div>
+
+
+
+     <a name="2006"></a>
+
+<p style="margin: 0in 0in 0pt; font-size: 12pt;">&nbsp;</p>
+<p style="margin: 0in 0in 0pt; font-size: 13pt;"><b><font color="#000000">2006</font></b></p>
+
+
+<div id="tagCB_tagjournal_tagGM_tagIF_tagRel_tagshCode_tagshData">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li><b> Y. Qi,&nbsp;</b>Z. Bar-Joseph, J. Klein-Seetharaman,(2006)&nbsp;<br>
+"Evaluation of different biological data and computational
+  classification methods for use in protein interaction
+  prediction",&nbsp, <i> PROTEINS: Structure, Function, and
+  Bioinformatics. 63(3):490-500. 2006 </i>
+   <font color="#38761d">(Impact Factor 3.39)</font><br>
+   <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+   Supervised Information integraion + Structured Prediction + Network biology
+  </font></font></font>
+</li>
+</ul>
+</td>
+<td class="p3">
+(<a
+  href="http://www3.interscience.wiley.com/cgi-bin/fulltext/112392432/HTMLSTART"
+  rel="nofollow" style="color: blue; text-decoration:
+  underline;">(Online)</a>)
+  <a
+  href="http://www.cs.cmu.edu/%7Eqyj/papers_sulp/proteins05_PPI_published.pdf"
+  rel="nofollow" style="color: blue; text-decoration:
+  underline;">(PDF)</a>)
+   (<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/06_proteins_ppi.bib">(bibTex)</a>)
+ (<a href="https://github.com/DataFusion4NetBio/Paper06-SupervisedEvidenceFusion4YeastPPI">Code</a>)
+(<a  href="http://www.cs.cmu.edu/%7Eqyj/papers_sulp/proteins05_PPI.html"
+  rel="nofollow" style="color: blue; text-decoration:
+  underline;">(SWeb)</a>     </td>
+</table>
+  </div>
+
+     <a name="2005"></a>
+
+<p style="margin: 0in 0in 0pt; font-size: 12pt;">&nbsp;</p>
+<p style="margin: 0in 0in 0pt; font-size: 13pt;"><b><font color="#000000">2005</font></b></p>
+
+
+
+<div id="tagCB_tagworkshop_tagGM_tagIF_tagRel_052_tagshData">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li><b>Y. Qi,</b>&nbsp;J. Klein-Seetharaman,&nbsp;Z. Bar-Joseph, (2005)<br>
+"A mixture of experts approach for protein-protein interaction
+  prediction", <i>Proceedings of Neural Information Processing Systems
+  (NIPS): The workshop on Computational Biology and the Analysis of
+  Heterogeneous Data, Dec 2005.</i> <br>
+   <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+   Supervised Information integraion + Structured Prediction + Network biology
+  </font></font></font>
+</li>
+</ul>
+</td>
+<td class="p3">
+(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/paper_CMU/nips2005-me.web.pdf"
+  rel="nofollow" style="color: blue; text-decoration:
+  underline;">PDF</a>), (talk&nbsp;<a
+  href="http://www.cs.cmu.edu/%7Eqyj/paper_CMU/nips2005.wkp.onlineTalk.pdf"
+  rel="nofollow" style="color: blue; text-decoration:
+  underline;">PDF</a>)(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/07_bmc_ppi.bib">bibTex</a>)
+
+(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papers_sulp/me05_PPI.html"
+  rel="nofollow" style="color: blue; text-decoration:
+  underline;">SWeb</a>) </td>
+</table>
+  </div>
+
+
+<div id="tagCB_tagconf_tagGM_tagshCode_tagshData">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li><b>Y. Qi,&nbsp;</b>J. Klein-Seetharaman,&nbsp;Z. Bar-Joseph, (2005)<br>
+ Random Forest Similarity for Protein-Protein Interaction Prediction from Multiple source ,<i>Pacific Symposium on Biocomputing 10: </i>
+ (<a href="http://psb.stanford.edu/" rel="nofollow" style="color: purple; text-decoration: underline;">PSB 2005</a>) Jan. 2005.
+ <br>
+   <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+   Supervised Information integraion + Structured Prediction + Network biology
+  </font></font></font>
+</li> </ul>
+</td>
+<td class="p3">
+ (<a href="http://www.cs.cmu.edu/%7Eqyj/papers_sulp/psb05_qi.pdf" rel="nofollow" style="color: blue; text-decoration: underline;">PDF</a>)
+ (<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/05_psb_ppi.bib">bibTex</a>)
+
+ (<a href="http://www.cs.cmu.edu/%7Eqyj/psb05_PPI.html" rel="nofollow" style="color: blue; text-decoration: underline;">SWeb</a>)
+</td>
+</table>
+ </div>
+
+
+     <a name="2004"></a>
+
+<p style="margin: 0in 0in 0pt; font-size: 12pt;">&nbsp;</p>
+<p style="margin: 0in 0in 0pt; font-size: 13pt;"><b><font color="#000000">2004</font></b></p>
+
+
+
+<div id="tagVM_tagjournal_tagStruct_tagFea_041">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li >A.G. Hauptmann, J. Gao, R. Yan,&nbsp;<b>Y. Qi</b>&nbsp;and J.&nbsp;, Yang, (2004)<br>
+ Automated Analysis of Nursing Home Observations , <i>IEEE Pervasive Computing, Special Issue on Pervasive Computing for Successful Aging, 3(2):15-21, April-June, 2004 </i>
+<br>
+   <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+   Temporal data segmentation + Supervised learning + Human activity Recognition
+  </font></font></font>
+</li></ul>
+</td>
+<td class="p3">
+ (<a href="http://www.informedia.cs.cmu.edu/documents/IEEE-PC04_AutoAnalysisNHO.pdf" rel="nofollow" style="color: blue; text-decoration: underline;">PDF</a>)
+ (<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/04_journalNursing_video.bib">bibTex</a>)
+ </td>
+</table>
+ </div>
+
+
+
+ <a name="2003"></a>
+
+<p style="margin: 0in 0in 0pt; font-size: 12pt;">&nbsp;</p>
+<p style="margin: 0in 0in 0pt; font-size: 13pt;"><b><font color="#000000">2003</font></b></p>
+
+
+<div id="tagVM_tagconf_tagSemi_tagStruct_031">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li><b>Y.Qi</b>, A.Hauptman, T. Liu, (2003)<br>
+"Supervised&nbsp;Classification&nbsp;for Video Shot
+  Segmentation",&nbsp; <i> Proceeding of 2003 IEEE International
+  Conference on Multimedia &amp; Expo </i> (<a
+  href="http://www.icme2003.org/" rel="nofollow" style="color: blue;
+  text-decoration: underline;" target="_blank">ICME 2003</a>), July
+  2003,&nbsp;Baltimore&nbsp;MD,&nbsp;USA.&nbsp;&nbsp; <br>
+   <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+   Temporal data segmentation + Supervised learning
+  </font></font></font>
+</li></ul>
+</td>
+<td class="p3">
+(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/paper_CMU/icme03_yanjun.pdf"
+  rel="nofollow" style="color: blue; text-decoration:
+  underline;">PDF</a>) (<a
+  href="http://www.cs.cmu.edu/%7Eqyj/paper_CMU/ICME03-shot-oral-0607.pdf"
+  rel="nofollow" style="color: blue; text-decoration:
+  underline;">Talk</a>) (<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/03_icme_shot.bib">bibTex</a>)
+</td>
+
+</table>
+ </div>
+
+
+
+     <a name="pre2003"></a>
+
+<p style="margin: 0in 0in 0pt; font-size: 12pt;">&nbsp;</p>
+<p style="margin: 0in 0in 0pt; font-size: 13pt;"><b><font
+color="#000000">Before 2003 </font></b></p>
+
+
+<div id="tagVM_tagconf_tagFea_tagGM_013">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li >Jin, R. ,<b>Y. Qi</b>, Hauptman,A.,(2002)&nbsp;<br>
+ Probabilistic Model for Camera Zoom Detection , <i>Proceedings
+  of&nbsp; the sixteenth conference of the International Association
+  for Pattern Recognition  </i> (<a
+  href="http://icpr2002.gel.ulaval.ca/" rel="nofollow" style="color:
+  blue; text-decoration: underline;" target="_blank">ICPR 2002</a>
+  Quebec City, Canada August 11-15,2002 <br>
+   <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+  UnSupervised learning + Pattern Mining in Video + density estimation
+  + EM
+  </font></font></font>
+</li>
+</ul>
+</td>
+<td class="p3">
+(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/paper_CMU/icpr02_yanjun.pdf"
+  rel="nofollow" style="color: blue; text-decoration:
+  underline;">PDF</a>) (<a href="http://www.cs.cmu.edu/%7Eqyj/papersA08/02_icpr_camera.bib">bibTex</a>)
+</td>
+
+</table>
+</div>
+
+<div id="tagVM_tagconf_tagIF_ttagStruct_012">
+<table class="pp">
+ <td class="p1">
+<ul>
+<li>Hauptmann, A., R.Yan,&nbsp;<b>Y.Qi</b>, Jin, R., M.Christel, M.Derthick,M.-Y.Chen, R.Baron, W.H.Lin, and T.D.Ng,(2002)&nbsp;<br>
+"Video Classification and Retrieval with the Informedia Digital Video
+  Library System",&nbsp;the Eleventh Text Retrieval Conference (<a
+  href="http://trec.nist.gov/pubs.html" rel="nofollow" style="color:
+  blue; text-decoration: underline;" target="_blank">TREC-2002</a>),
+  Nov 2002&nbsp; <br>
+     <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+   Supervised information integration + Video retrieval
+  </font></font></font>
+</li>
+</ul>
+</td>
+<td class="p3">
+(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/03_trec_video.bib">bibTex</a>)
+</td>
+</table> </div>
+
+
+
+<div id="tagVM_tagconf_tagIF_tagStruct_011">
+<table class="pp">
+ <td class="p1">
+<ul>
+  <li>Hauptmann, A., Jin, R., N. Papernick, D. Ng,&nbsp;<b>Y. Qi</b>, Houghton, RThornton, S. (2001) <br>
+Video Retrieval with the Informedia Digital Video Library System,
+  <i>Proceedings of the Tenth Text Retrieval Conference </i>(<a
+  href="http://trec.nist.gov/pubs/trec10/t10_proceedings.html/"
+  rel="nofollow" style="color: blue; text-decoration: underline;"
+  target="_blank">TREC-2001</a>), Nov 2001
+  <br>   <font face="Arial,Helvetica"><font color="#990000"><font size=-1>
+   Supervised information integration + Video retrieval
+  </font></font></font>
+</li></ul>
+</td>
+<td class="p3">
+(<a
+  href="http://www.cs.cmu.edu/%7Eqyj/papersA08/02_trec_video.bib">bibTex</a>)
+ </td>
+</table>
+ </div>
+
+
+</span>
+
+
+
+	<!-- Anchors -->
+<p><a name="bottomPage"></a></p>
+<p align="right"> <font face="Times New Roman,Times"> <a  href="#topPage">Back to top</a> </font></p>
+<a style="position: fixed; bottom:10px; left:10px;" href="#bottomPage" title="Jump to Bottom"><img style="border: none;" src="index_files/icon-gobot.png"  height="32" width="42"></a>
+<a style="position: fixed; bottom:10px; right:10px;" href="#topPage" title="Back to Top"><img style="border: none;" src="index_files/icon-gotop.png"  height="32" width="42"></a>
+
+	<!-- End Page Content -->
+
+	<!-- Begin Footer <div id="footer">-->
+		
+      <div class="card-header">
+		<p>
+		<span class="style6">
+			<div align="center">
+			<span style="" lang="EN-US">
+			</span></div>
+			<p align="left"><i>Success
+			is not final, failure is not fatal: it is the courage to continue that counts.</i>
+			--- Winston Churchill</p>
+			</div>
+		
+
+	</div>
+<!-- End Container -->
+
+<!-- #EndTemplate -->
+
+
+</body></html>
