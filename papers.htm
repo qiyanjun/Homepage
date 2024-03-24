@@ -14,85 +14,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
-
- <script language="javascript" type="text/javascript">
-
- var state = 'none';
- function showhide(layer_ref) {
- if (state == 'block') {
- state = 'none';
- }
- else {
- state = 'block';
- }
-
- if (document.all) { //IS IE 4 or 5 (or 6 beta)
- eval( "document.all." + layer_ref + ".style.display = state");
- }
- if (document.layers) { //IS NETSCAPE 4 or below
- document.layers[layer_ref].display = state;
- }
- if (document.getElementById &&!document.all) {
- hza = document.getElementById(layer_ref);
- hza.style.display = state;
- }
- }
-
- function show(layer_ref) {
- state = 'block';
-
- if (document.all) { //IS IE 4 or 5 (or 6 beta)
- eval( "document.all." + layer_ref + ".style.display = state");
- }
- if (document.layers) { //IS NETSCAPE 4 or below
- document.layers[layer_ref].display = state;
- }
- if (document.getElementById &&!document.all) {
- hza = document.getElementById(layer_ref);
- hza.style.display = state;
- }
- }
-
- function hide(layer_ref) {
- state = 'none';
-
- if (document.all) { //IS IE 4 or 5 (or 6 beta)
- eval( "document.all." + layer_ref + ".style.display = state");
- }
- if (document.layers) { //IS NETSCAPE 4 or below
- document.layers[layer_ref].display = state;
- }
- if (document.getElementById &&!document.all) {
- hza = document.getElementById(layer_ref);
- hza.style.display = state;
- }
- }
-
-
- function sDiv(pass) {
- var divs = document.getElementsByTagName('div');
- for(i=0;i<divs.length;i++)
- {
- 	if(divs[i].id.match('tag'))
- 	{
-
- 	if(divs[i].id.match(pass))
- 	{
- 		show(divs[i].id);
- 	}
- 	if(!divs[i].id.match(pass))
- 	{
- 		hide(divs[i].id);
- 	}
-
-
- 	}
- }
-
- }
-
-</script>
-
 </head>
 
 
@@ -104,87 +25,19 @@
 
 <div class="container"> 
 
-<nav class="navbar navbar-fixed-top navbar-expand-sm navbar-dark bg-info">
+  <a class="navbar-brand" href="index.htm">Back to HomePage</a>
 
-  <a class="navbar-brand" href="index.htm">Dr. Yanjun Qi</a>
-
- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button> 
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav">
-      <li class="nav-item ">
-        <a class="nav-link" href="papers.htm" >Publications</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="teaching.htm" >Teaching </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="gQdata.htm" >Research </a>
-      </li>
-
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="gnews.htm" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-          Group
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item"  href="https://qdata.github.io/qdata-page/"
-        target="_blank">Group Research Blog</a>
-          <a class="dropdown-item"  href="https://github.com/qdata" target="_blank">Group GitHub</a>
-
-          <a class="dropdown-item"  href="https://github.com/Qdata4Capstone" target="_blank">Group Capstone GitHub</a>
-
-          <a class="dropdown-item"  href="https://www.youtube.com/channel/UCHMYETgeGbNHVHLidZSV8BQ" target="_blank">Group Research Videos</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item"  href="https://qdata.github.io/qdata-page/member-page/" target="_blank">Group Members</a>
-          <a class="dropdown-item"  href="https://qdata.github.io/qdata-page/news/" target="_blank">Group News</a>
-
-
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item"  href="https://qdata.github.io/deep2Read/aReadingsIndexByDate/" target="_blank">Journal Club: Algorithm</a>
-          <a class="dropdown-item"  href="https://qdata.github.io/deep-learning-undergrad-reading-group/" target="_blank">Journal Club: Undergraduate</a>
-
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item"  href="http://qiyanjun.github.io/books2read//tag/" target="_blank">My Notes on Readings</a>
-          <div class="dropdown-divider"></div>
-          <i><b>OLD legacy research sites</b></i>
-          <a class="dropdown-item"  href="http://deeplearning4discrete.net" target="_blank">deeplearning4discrete.net</a>
-          <a class="dropdown-item"  href="http://deeplearning4biomed.org" target="_blank">deeplearning4biomed.org</a>
-          <a class="dropdown-item"  href="http://jointggm.org" target="_blank">jointnets.org</a>
-           <a class="dropdown-item"  href="http://securemachinelearning.org" target="_blank">TrustworthyMachineLearning.org</a>
-        </div>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link"
+<BR>
+  <a class="nav-link"
         href="http://scholar.google.com/citations?user=eXKdSu0AAAAJ&hl=en"
-        target="_blank" >GoogleScholar</a>
-      </li>
-
-      <li class="nav-item">
-          <a class="nav-link"  href="bio.htm">ShortBio</a>
-      </li>
-
-      <li class="nav-item">
-          <a class="nav-link"  href="contact.htm">Contact</a>
+        target="_blank" >My GoogleScholar</a>
       </li>
 
 
-            
-    </ul>
-  </div>
-</nav>       
-</div>   
-<!-- End topbar -->
+<BR>
+<BR>
+ <span class="style2">
 
-
-
-    <!-- Begin Container -->
- <div class="container">
-
-		  <span class="style2">
 
  
 		<br>	<h2>Selected Peer-Reviewed Publications  <br> </h2>
@@ -210,61 +63,6 @@
 </div>
 </div>
 
-
-<!--
- + Type of Publication :
-<div> [<a
-  href="javascript:sDiv('tagthesis');">Theses</a>]   [<a
-  href="javascript:sDiv('tagbook');">Book &amp; book chapters</a>]
-  [<a href="javascript:sDiv('tagjournal');">Journal</a>]   [<a
-  href="javascript:sDiv('tagconf');">Conference</a>]  [<a
-  href="javascript:sDiv('tagworkshop');">Workshop</a>]
-  [<a href="javascript:sDiv('tagpatent');">Patent</a>]
-  [<a href="javascript:sDiv('tagbestp');">BestPaper</a>]
-  [<a href="javascript:sDiv('tagposter');">Poster</a>]
-</div>
-
-+ Categorization wrt Application/Data Types:
-<div>
- [<a href="javascript:sDiv('tagTex');">Text Mining, IR, NLP</a>]
-  [<a href="javascript:sDiv('tagCB');">Biomedical Data Mining</a>]
- [<a href="javascript:sDiv('tagVM');">Video/Image/Sensing Data Mining</a>]
- [<a href="javascript:sDiv('tagSY');">System Data Mining</a>]
-</div> 
-<div class="card-header">
-+ Categorization wrt Code/Data Sharing:
-<div id="ShareTypes">
-[<a  href="javascript:sDiv('tagshCode');">CodeShared</a>]
-  [<a href="javascript:sDiv('tagshData');">DataShared</a>] 
-</div>
-</div>
-<br>
-
-  [<a href="javascript:sDiv('tagFusion');">Information Fusion</a>]
--->
-
-<!---tagFea  tagGM tagSemi tagFusion tagStruct  tagSecu-->
-
-<!---
-<div class="card-header">
-+ Categorization wrt Methods: 
-[<a href="javascript:sDiv('tag');" class="btn btn-danger btn-sm">Show all</a>] 
-  [<a href="javascript:sDiv('tagDeep');" class="btn btn-info btn-sm">Deep Learning</a>]
-  [<a href="javascript:sDiv('tagFea');" class="btn btn-info btn-sm">Representation (embed/sparse/factor/.)</a>]
-  [<a href="javascript:sDiv('tagGM');" class="btn btn-info btn-sm">Graphical/Relational Modeling</a>]
-  [<a href="javascript:sDiv('tagSemi');" class="btn btn-info btn-sm">Semi-supervised/Supervised/Multitask</a>]
-  [<a href="javascript:sDiv('tagStruct');" class="btn btn-info btn-sm">Structured Input/Output</a>]
-  [<a href="javascript:sDiv('tagSecu');" class="btn btn-info btn-sm">Robust MachineLearning</a>]
-</div>
-
-<div class="card-header">
-+ Summary Sites: [   <a
-        href="http://scholar.google.com/citations?user=eXKdSu0AAAAJ&hl=en"
-        target="_blank" class="btn btn-success btn-sm">GoogleScholar</a>] | [
-        <a href="https://github.com/qdata" target="_blank" class="btn btn-success btn-sm">Our GitHub</a>]| <BR>
-      [ <a href="http://deeplearning4biomed.org" target="_blank" class="btn btn-success btn-sm">deepBiomed</a>]| [<a href="http://securemachinelearning.org" target="_blank" class="btn btn-success btn-sm">trustworthyLearning</a>]| [ <a href="http://www.deeplearning4discrete.net" target="_blank" class="btn btn-success btn-sm">deepDiscrete</a>] | [ <a href="http://jointggm.org" target="_blank" class="btn btn-success btn-sm">jointnets.org</a>]
-</div>
--->
 
 
 <a name="2024"></a>
@@ -3653,31 +3451,17 @@ Video Retrieval with the Informedia Digital Video Library System,
 
 
 
-	<!-- Anchors -->
-<p><a name="bottomPage"></a></p>
-<p align="right"> <font face="Times New Roman,Times"> <a  href="#topPage">Back to top</a> </font></p>
-<a style="position: fixed; bottom:10px; left:10px;" href="#bottomPage" title="Jump to Bottom"><img style="border: none;" src="index_files/icon-gobot.png"  height="32" width="42"></a>
-<a style="position: fixed; bottom:10px; right:10px;" href="#topPage" title="Back to Top"><img style="border: none;" src="index_files/icon-gotop.png"  height="32" width="42"></a>
+<div style="position: fixed; bottom: 76px; left:10px; width: 80px; height: 36px; background-color: #FFCF79;">
+<a style="position: fixed; bottom:80px; left:10px;" href="#topPage" title="Back to Top">BackTop</a>
+</div>
 
 	<!-- End Page Content -->
 
-	<!-- Begin Footer <div id="footer">-->
-		
-      <div class="card-header">
-		<p>
-		<span class="style6">
-			<div align="center">
-			<span style="" lang="EN-US">
-			</span></div>
-			<p align="left"><i>Success
-			is not final, failure is not fatal: it is the courage to continue that counts.</i>
-			--- Winston Churchill</p>
-			</div>
-		
-
+	
 	</div>
 <!-- End Container -->
 
+</div>
 <!-- #EndTemplate -->
 
 
