@@ -1,0 +1,62 @@
+@import url("layout.css");
+
+/* ===== style for Datasets table ===== */
+
+#datatab
+{
+background: white;
+margin: 10px;
+border-collapse: collapse;
+text-align: left;
+}
+#datatab th
+{
+font-size: 14px;
+font-weight: normal;
+color: white;
+background: #74a743;
+padding: 5px 10px;
+text-align: left;
+}
+
+#datatab td
+{
+border-bottom: 1px solid #ccc;
+color: black;
+padding: 3px 8px;
+}
+
+#datatab tbody tr:hover td {
+color: #000;
+background: #eeeeee;
+}
+
+#datatab2
+{
+background: white;
+margin: 10px;
+border-collapse: collapse;
+text-align: left;
+width: 918px;
+}
+#datatab2 th
+{
+font-size: 14px;
+font-weight: normal;
+color: white;
+background: #443266;
+padding: 5px 10px;
+text-align: left;
+}
+
+#datatab2 td
+{
+border-bottom: 1px solid #ccc;
+color: black;
+padding: 3px 8px;
+}
+
+#datatab2 tbody tr:hover td {
+color: #000;
+background: #eeeeee;
+}
