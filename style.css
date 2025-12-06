@@ -1,8 +1,8 @@
 
 body {
 	font-size: 1em;
-	/*background-color: #67b;*/
-	/*font-family: Arial ;	 !important*/
+	font-family: Arial, Helvetica, sans-serif;
+	/*background-color: #67b;/*
 }
 #container {
 	width: 100%;
@@ -211,7 +211,7 @@ a:hover {
 .style5 {
 	overflow: auto;
 	display: inline;
-	font-family: Georgia, Times, "Times New Roman", serif;; 
+	font-family: Arial, Helvetica, sans-serif;
 }
 .style8 {
     width: 90px; 
@@ -285,5 +285,3 @@ padding: 3px 8px;
 color: #000;
 background: #eeeeee;
 }
-
-
